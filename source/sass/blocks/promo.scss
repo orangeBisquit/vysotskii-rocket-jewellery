@@ -1,0 +1,92 @@
+.promo {
+  min-height: 463px;
+  font-family: $font-cormorant;
+  color: $color-white;
+  background-image: url("../img/promo-desktop-1x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo-desktop-2x.jpg");
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    background-image: url("../img/promo-tablet-1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-tablet-2x.jpg");
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    background-image: url("../img/promo-mobile-1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-mobile-2x.jpg");
+    }
+  }
+
+  &--catalog {
+    min-height: 261px;
+    background-image: url("../img/promo-catalog-desktop-1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-catalog-desktop-2x.jpg");
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      background-image: url("../img/promo-catalog-tablet-1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-catalog-tablet-2x.jpg");
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      background-image: url("../img/promo-catalog-mobile-1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-catalog-mobile-2x.jpg");
+      }
+    }
+  }
+}
+
+.promo__wrapper {
+  padding-top: 185px;
+  text-align: center;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 192px;
+  }
+
+  &--catalog {
+    padding-top: 102px;
+  }
+}
+
+.promo__heading {
+  margin: 0;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 115%;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $breakpoint-mobile) {
+    line-height: 110%;
+    font-size: 38px;
+  }
+}
+
+.promo__descr {
+  margin: 0;
+  font-style: italic;
+  font-size: 38px;
+  line-height: 130%;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 34px;
+  }
+}

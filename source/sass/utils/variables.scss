@@ -1,14 +1,20 @@
 // Colors
-$color-white: #ffffff;
+$color-white: #FFFFFF;
+$color-accent: #A87B62;
+$color-accent-light: #F0EAE4;
+$color-input-placeholder: #9B9997;
+$color-text: #1D1613;
+$color-header-border: #F6F5F4;
+;
 
 // Media Breakpoints
 $breakpoint-tablet: 1023px;
 $breakpoint-mobile: 767px;
 
 // Fonts
-$font-roboto: "Roboto Condensed",
+$font-poppins: "Poppins",
 "Arial",
 sans-serif;
-$font-pt-mono: "PT Mono",
+$font-cormorant: "Cormorant Garamond",
 "Courier New",
-sans-serif;
+serif;

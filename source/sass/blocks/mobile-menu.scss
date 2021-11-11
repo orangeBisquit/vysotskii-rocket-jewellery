@@ -1,0 +1,54 @@
+.mobile-menu--active {
+  background-color: $color-accent;
+  height: 100vh;
+  overflow-x: scroll;
+
+  .mobile-menu__toggle {
+    span {
+      background-color: $color-white;
+    }
+
+    span::before,
+    span::after {
+      background-color: $color-white;
+    }
+
+    &:focus {
+      outline-color: $color-white;
+    }
+  }
+
+  .mobile-menu__logo {
+
+    svg {
+      transition: all 0.2s ease;
+      fill: $color-white;
+    }
+  }
+
+  .mobile-menu__cart-button {
+    svg {
+      transition: all 0.2s ease;
+      stroke: $color-white;
+    }
+  }
+
+  .mobile-menu__search-container {
+    display: block;
+    margin-top: 40px;
+    order: 1;
+    width: 100%;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-top: 24px;
+    }
+  }
+
+  .mobile-menu__nav {
+    display: block;
+  }
+
+  .mobile-menu__sub-nav {
+    display: block;
+  }
+}

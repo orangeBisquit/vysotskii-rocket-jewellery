@@ -94,7 +94,7 @@ gulp.task("copy", function () {
 
 gulp.task("javascript", function () {
   return gulp.src([
-    "source/js/**"
+    "source/js/**/**"
   ], {
     base: "source"
   })

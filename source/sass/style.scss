@@ -1,5 +1,13 @@
 @import "utils/normalize.scss";
-@import "utils/general.scss";
 @import "utils/variables.scss";
 @import "utils/mixins.scss";
+@import "utils/general.scss";
 @import "utils/fonts.scss";
+@import "blocks/header.scss";
+@import "blocks/mobile-menu.scss";
+@import "blocks/promo.scss";
+@import "blocks/heading.scss";
+@import "blocks/link.scss";
+@import "blocks/new.scss";
+@import "splide-slider/splide.scss";
+@import "blocks/blog.scss";
