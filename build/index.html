@@ -14,9 +14,10 @@
   <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-500italic.woff2" rel="prefetch" as="font" crossorigin="">
   <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-600.woff2" rel="prefetch" as="font" crossorigin="">
   <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-700.woff2" rel="prefetch" as="font" crossorigin="">
-  <link href="css/style.min.css" rel="stylesheet">
 
-  <title>Jewellery Store</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link href="css/style.min.css" rel="stylesheet">
+  <title>CH Jewellery Store</title>
 </head>
 
 <body>
@@ -93,136 +94,391 @@
     </section>
     <section class="new">
       <div class="new__wrapper wrapper">
-        <h3 class="new__heading heading">New in</h3>
+        <h3 class="new__heading heading">New In</h3>
         <a href="catalog.html" class="new__shop-link link">Shop Now</a>
-        <div class="new__products-wrapper">
-          <ul class="new__products-list">
-            <li class="new__products-item">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
+        <!-- Swiper SLider Library -->
+        <button class="new__button new__button--prev swiper-button-prev" aria-label="previous products"></button>
+        <button class="new__button new__button--next swiper-button-next" aria-label="next products"></button>
+        <div class="new__slider swiper">
+
+          <!-- Additional required wrapper -->
+          <ul class="new__slides-list swiper-wrapper">
+            <!-- Slides -->
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.webp 1x, img/purple-gemstone-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.webp 1x, img/purple-gemstone-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop-1x.webp 1x, img/purple-gemstone-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.jpg 1x, img/purple-gemstone-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.jpg 1x, img/purple-gemstone-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/purple-gemstone-necklace-desktop-1x.jpg" srcset="img/purple-gemstone-necklace-desktop-1x.jpg 1x, img/purple-gemstone-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Necklace with amethyst</h4>
+                <p>$ 145</p>
+              </a>
             </li>
-            <li class="new__products-item">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.webp 1x, img/layered-choker-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.webp 1x, img/layered-choker-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/layered-choker-necklace-desktop-1x.webp 1x, img/layered-choker-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.jpg 1x, img/layered-choker-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.jpg 1x, img/layered-choker-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/layered-choker-necklace-desktop-1x.jpg" srcset="img/layered-choker-necklace-desktop-1x.jpg 1x, img/layered-choker-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Layered сhoker</h4>
+                <p>$ 115</p>
+              </a>
             </li>
-            <li class="new__products-item">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.webp 1x, img/layered-choker-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.webp 1x, img/layered-choker-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/dainty-gold-necklace-desktop-1x.webp 1x, img/dainty-gold-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.jpg 1x, img/layered-choker-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.jpg 1x, img/layered-choker-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/dainty-gold-necklace-desktop-1x.jpg" srcset="img/dainty-gold-necklace-desktop-1x.jpg 1x, img/dainty-gold-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Gold chain</h4>
+                <p>$ 215</p>
+              </a>
             </li>
-            <li class="new__products-item">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.webp 1x, img/purple-gemstone-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.webp 1x, img/purple-gemstone-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/galaxy-earrings-desktop-1x.webp 1x, img/galaxy-earrings-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.jpg 1x, img/purple-gemstone-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.jpg 1x, img/purple-gemstone-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/galaxy-earrings-desktop-1x.jpg" srcset="img/galaxy-earrings-desktop-1x.jpg 1x, img/galaxy-earrings-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Galaxy earrings</h4>
+                <p>$ 95</p>
+              </a>
             </li>
-            <li class="new__products-item">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.webp 1x, img/layered-choker-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.webp 1x, img/layered-choker-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/layered-choker-necklace-desktop-1x.webp 1x, img/layered-choker-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.jpg 1x, img/layered-choker-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.jpg 1x, img/layered-choker-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/layered-choker-necklace-desktop-1x.jpg" srcset="img/layered-choker-necklace-desktop-1x.jpg 1x, img/layered-choker-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Layered сhoker</h4>
+                <p>$ 115</p>
+              </a>
             </li>
-            <li class="new__products-item">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.webp 1x, img/layered-choker-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.webp 1x, img/layered-choker-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/dainty-gold-necklace-desktop-1x.webp 1x, img/dainty-gold-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.jpg 1x, img/layered-choker-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.jpg 1x, img/layered-choker-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/dainty-gold-necklace-desktop-1x.jpg" srcset="img/dainty-gold-necklace-desktop-1x.jpg 1x, img/dainty-gold-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Gold chain</h4>
+                <p>$ 215</p>
+              </a>
             </li>
-            <li class="new__products-item">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.webp 1x, img/purple-gemstone-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.webp 1x, img/purple-gemstone-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/galaxy-earrings-desktop-1x.webp 1x, img/galaxy-earrings-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.jpg 1x, img/purple-gemstone-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.jpg 1x, img/purple-gemstone-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/galaxy-earrings-desktop-1x.jpg" srcset="img/galaxy-earrings-desktop-1x.jpg 1x, img/galaxy-earrings-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Galaxy earrings</h4>
+                <p>$ 95</p>
+              </a>
             </li>
-            <li class="new__products-item">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.webp 1x, img/purple-gemstone-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.webp 1x, img/purple-gemstone-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop-1x.webp 1x, img/purple-gemstone-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.jpg 1x, img/purple-gemstone-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.jpg 1x, img/purple-gemstone-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/purple-gemstone-necklace-desktop-1x.jpg" srcset="img/purple-gemstone-necklace-desktop-1x.jpg 1x, img/purple-gemstone-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Necklace with amethyst</h4>
+                <p>$ 145</p>
+              </a>
+            </li>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.webp 1x, img/purple-gemstone-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.webp 1x, img/purple-gemstone-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/galaxy-earrings-desktop-1x.webp 1x, img/galaxy-earrings-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.jpg 1x, img/purple-gemstone-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.jpg 1x, img/purple-gemstone-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/galaxy-earrings-desktop-1x.jpg" srcset="img/galaxy-earrings-desktop-1x.jpg 1x, img/galaxy-earrings-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Galaxy earrings</h4>
+                <p>$ 95</p>
+              </a>
+            </li>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.webp 1x, img/layered-choker-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.webp 1x, img/layered-choker-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/layered-choker-necklace-desktop-1x.webp 1x, img/layered-choker-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.jpg 1x, img/layered-choker-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.jpg 1x, img/layered-choker-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/layered-choker-necklace-desktop-1x.jpg" srcset="img/layered-choker-necklace-desktop-1x.jpg 1x, img/layered-choker-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Layered сhoker</h4>
+                <p>$ 115</p>
+              </a>
+            </li>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.webp 1x, img/layered-choker-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.webp 1x, img/layered-choker-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/dainty-gold-necklace-desktop-1x.webp 1x, img/dainty-gold-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile-1x.jpg 1x, img/layered-choker-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet-1x.jpg 1x, img/layered-choker-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/dainty-gold-necklace-desktop-1x.jpg" srcset="img/dainty-gold-necklace-desktop-1x.jpg 1x, img/dainty-gold-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Gold chain</h4>
+                <p>$ 215</p>
+              </a>
+            </li>
+            <li class="new__slides-item swiper-slide">
+              <a href="catalog.html" aria-label="product page link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.webp 1x, img/purple-gemstone-necklace-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.webp 1x, img/purple-gemstone-necklace-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop-1x.webp 1x, img/purple-gemstone-necklace-desktop-2x.webp 2x">
+                  <!-- 1x - 130/136,  2x - 260/272,-->
+                  <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile-1x.jpg 1x, img/purple-gemstone-necklace-mobile-2x.jpg 2x">
+                  <!-- 1x - 324/340,  2x - 648/680,-->
+                  <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet-1x.jpg 1x, img/purple-gemstone-necklace-tablet-2x.jpg 2x">
+                  <!-- 1x - 270/284,  2x - 540/568,-->
+                  <img src="img/purple-gemstone-necklace-desktop-1x.jpg" srcset="img/purple-gemstone-necklace-desktop-1x.jpg 1x, img/purple-gemstone-necklace-desktop-2x.jpg 2x" alt="purple gemstone necklace desktop" width="270" height="284" loading="lazy">
+                </picture>
+
+                <h4>Necklace with amethyst</h4>
+                <p>$ 145</p>
+              </a>
             </li>
           </ul>
-          <ul class="new__pages-list">
-          </ul>
+          <!-- If we need pagination -->
+
         </div>
+        <div class="new__pagination swiper-pagination"></div>
+
       </div>
     </section>
-    <div class="new__wrapper wrapper">
-      <div class="splide">
-        <div class="splide__arrows">
-          <button class="splide__arrow splide__arrow--prev">
-            Prev
-          </button>
-          <button class="splide__arrow splide__arrow--next">
-            Next
-          </button>
-        </div>
-        <div class="new__products-wrapper splide__track">
-          <ul class="new__products-list splide__list">
-            <li class="new__products-item splide__slide">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
-            </li>
-            <li class="new__products-item splide__slide">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
-            </li>
-            <li class="new__products-item splide__slide">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
-            </li>
-            <li class="new__products-item splide__slide">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
-            </li>
-            <li class="new__products-item splide__slide">
-              <img src="img/purple-gemstone-necklace-desktop-1x.jpg" alt="purple gemstone necklace desktop" width="270" height="284">
-              <h4>Necklace with amethyst</h4>
-              <p>$ 145</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+
     <section class="blog">
       <div class="blog__wrapper wrapper">
         <h3 class="blog__heading heading">Blog</h3>
         <a href="" class="blog__read-link link">Read All</a>
-        <ul class="blog__posts-list">
-          <li class="blog__posts-item">
-            <div class="blog__height-wrapper">
-              <div class="blog__img-wrapper"></div>
+        <ul class="blog__list">
+          <li class="blog__list-item">
+            <article class="blog__post">
+              <div class="blog__img-wrapper">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/jess-harper-sunday-mobile-1x.jpg 1x, img/jess-harper-sunday-mobile-1x.jpg 2x">
+                  <source media="(max-width: 1023px)" srcset="img/jess-harper-sunday-tablet-1x.jpg 1x, img/jess-harper-sunday-tablet-1x.jpg 2x">
+                  <img src="img/jess-harper-sunday-desktop-1x.jpg" srcset="img/jess-harper-sunday-desktop-1x.jpg 1x, img/jess-harper-sunday-desktop-1x.jpg 2x" alt="jess harper jewellery">
+                </picture>
+              </div>
               <div class="blog__content-wrapper">
                 <time datetime="2019-09-30">September 30, 2019</time>
                 <h4>How to care for
                   your jewellery</h4>
-                <a href="#" class="link">Read Articles</a>
+                <a href="#" class="link">Read Article</a>
               </div>
-            </div>
+            </article>
           </li>
-          <li class="blog__posts-item">
-            <div class="blog__height-wrapper">
-              <div class="blog__img-wrapper"></div>
+          <li class="blog__list-item">
+            <article class="blog__post blog__post--content-left">
+              <div class="blog__img-wrapper">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/alex-holyoake-mobile-1x.jpg 1x, img/alex-holyoake-mobile-2x.jpg 2x">
+                  <source media="(max-width: 1023px)" srcset="img/alex-holyoake-tablet-1x.jpg 1x, img/alex-holyoake-tablet-2x.jpg 2x">
+                  <img src="img/alex-holyoake-desktop-1x.jpg" srcset="img/alex-holyoake-desktop-1x.jpg 1x, img/alex-holyoake-desktop-2x.jpg 2x" alt="jess harper jewellery">
+                </picture>
+              </div>
               <div class="blog__content-wrapper">
-                <time datetime="2019-09-23">September 23, 2019</time>
+                <time datetime="2019-09-30">September 30, 2019</time>
                 <h4>Power of
                   crystals</h4>
-                <a href="#" class="link">Read Articles</a>
+                <a href="#" class="link">Read Article</a>
               </div>
-            </div>
+            </article>
           </li>
-          <li class="blog__posts-item blog__posts-item--big">
-            <div class="blog__height-wrapper">
-              <div class="blog__img-wrapper"></div>
-              <div class="blog__content-wrapper">
-                <time datetime="2019-09-16">September 16, 2019</time>
-                <h4>AW 19 trends</h4>
-                <a href="#" class="link">Read Articles</a>
+          <li class="blog__list-item blog__list-item--big">
+            <article class="blog__post blog__post--big">
+              <div class="blog__img-wrapper">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/alve-odonnell-mobile-1x.jpg 1x, img/alve-odonnell-mobile-2x.jpg 2x">
+                  <source media="(max-width: 1023px)" srcset="img/alve-odonnell-tablet-1x.jpg 1x, img/alve-odonnell-tablet-2x.jpg 2x">
+                  <img src="img/alve-odonnell-desktop-1x.jpg" srcset="img/alve-odonnell-desktop-1x.jpg 1x, img/alve-odonnell-desktop-2x.jpg 2x" alt="jess harper jewellery">
+                </picture>
               </div>
-            </div>
+              <div class="blog__content-wrapper">
+                <time datetime="2019-09-30">September 30, 2019</time>
+                <h4>AW 19 trends</h4>
+                <a href="#" class="link">Read Article</a>
+              </div>
+            </article>
           </li>
       </ul></div>
-      
+    </section>
+    <section class="questions">
+      <div class="questions__wrapper">
+        <h3 class="questions__heading heading">Frequently asked questions</h3>
+
+        <ul class="questions__list">
+          <li class="questions__list-item">
+            <button>
+              <span>What materials are the jewellery made of?</span>
+            </button>
+            <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+              semiprecious stones
+              and crystals.</p>
+          </li>
+          <li class="questions__list-item questions__list-item--countries">
+            <button>
+              <span>Which countries do you deliver to?</span>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum amet voluptatibus dignissimos placeat
+              corrupti neque facilis molestiae!</p>
+          </li>
+          <li class="questions__list-item">
+            <button>
+              <span>What are the payment methods?</span>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident exercitationem ratione velit
+              perspiciatis voluptatum facere expedita!</p>
+          </li>
+          <li class="questions__list-item questions__list-item--return">
+            <button>
+              <span>Can I return the <br> jewellery if it didn’t fit me?</span>
+            </button>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt sint expedita voluptas temporibus
+              placeat obcaecati reiciendis veniam.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery__wrapper wrapper">
+        <h3 class="gallery__heading heading">@Chjewellery</h3>
+        <a href="" class="gallery__follow-link link">Follow Us</a>
+        <ul class="gallery__grid-list">
+          <li class="gallery__grid-item">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/gallery-1-mobile-1x.jpg 1x, img/gallery-1-mobile-2x 2x">
+              <source media="(max-width: 1023px)" srcset="img/gallery-1-tablet-1x.jpg 1x, img/gallery-1-tablet-2x 2x">
+              <img src="img/gallery-1-desktop-1x.jpg" srcset="img/gallery-1-desktop-1x.jpg 1x, img/gallery-1-desktop-2x 2x" alt="Jewellery Example">
+            </picture>
+          </li>
+          <li class="gallery__grid-item gallery__grid-item--big">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/gallery-2-mobile-1x.jpg 1x, img/gallery-2-mobile-2x 2x">
+              <source media="(max-width: 1023px)" srcset="img/gallery-2-tablet-1x.jpg 1x, img/gallery-2-tablet-2x 2x">
+              <img src="img/gallery-2-desktop-1x.jpg" srcset="img/gallery-2-desktop-1x.jpg 1x, img/galllery-2-desktop-2x 2x" alt="Jewellery Example">
+            </picture>
+          </li>
+          <li class="gallery__grid-item gallery__grid-item--small">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/gallery-3-mobile-1x.jpg 1x, img/gallery-3-mobile-2x 2x">
+              <source media="(max-width: 1023px)" srcset="img/gallery-3-tablet-1x.jpg 1x, img/gallery-3-tablet-2x 2x">
+              <img src="img/gallery-3-desktop-1x.jpg" srcset="img/gallery-3-desktop-1x.jpg 1x, img/gallery-3-desktop-2x 2x" alt="Jewellery Example">
+            </picture>
+          </li>
+          <li class="gallery__grid-item gallery__grid-item--small">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/gallery-4-mobile-1x.jpg 1x, img/gallery-4-mobile-2x 2x">
+              <source media="(max-width: 1023px)" srcset="img/gallery-4-tablet-1x.jpg 1x, img/gallery-4-tablet-2x 2x">
+              <img src="img/gallery-4-dektop-1x.jpg" srcset="img/gallery-4-desktop-1x.jpg 1x, img/gallery-4-desktop-2x.jpg 2x" alt="Jewellery Example">
+            </picture>
+          </li>
+          <li class="gallery__grid-item">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/gallery-5-mobile-1x.jpg 1x, img/gallery-5-mobile-2x 2x">
+              <source media="(max-width: 1023px)" srcset="img/gallery-5-tablet-1x.jpg 1x, img/gallery-5-tablet-2x 2x">
+              <img src="img/gallery-5-desktop-1x.jpg" srcset="img/gallery-5-desktop-1x.jpg 1x, img/gallery-5-desktop-2x 2x" alt="Jewellery Example">
+            </picture>
+          </li>
+          <li class="gallery__grid-item">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/gallery-6-mobile-1x.jpg 1x, img/gallery-6-mobile-2x 2x">
+              <source media="(max-width: 1023px)" srcset="img/gallery-6-tablet-1x.jpg 1x, img/gallery-6-tablet-2x 2x">
+              <img src="img/gallery-6-desktop-1x.jpg" srcset="img/gallery-6-desktop-1x.jpg 1x, img/gallery-6-desktop-2x 2x" alt="Jewellery Example">
+            </picture>
+          </li>
+          <li class="gallery__grid-item">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/gallery-7-mobile-1x.jpg 1x, img/gallery-7-mobile-2x 2x">
+              <source media="(max-width: 1023px)" srcset="img/gallery-7-tablet-1x.jpg 1x, img/gallery-7-tablet-2x 2x">
+              <img src="img/gallery-7-desktop-1x.jpg" srcset="img/gallery-7-desktop-1x.jpg 1x, img/gallery-7-desktop-2x 2x" alt="Jewellery Example">
+            </picture>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
   <footer class="footer">
@@ -230,6 +486,7 @@
   </footer>
 
   <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/vendor.js"></script>
 </body>
 
 </html>

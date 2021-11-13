@@ -1,11 +1,20 @@
 .link {
   display: inline-block;
+  vertical-align: middle;
   margin: 0 auto;
-  padding: 5px;
+  margin-bottom: 60px;
   border-bottom: 1px solid $color-accent;
   color: $color-text;
   font-size: 16px;
   line-height: 130%;
   text-decoration: none;
   vertical-align: middle;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 54px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 44px;
+  }
 }

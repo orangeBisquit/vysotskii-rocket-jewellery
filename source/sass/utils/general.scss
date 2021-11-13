@@ -41,7 +41,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  width: clamp(900px, calc(1170 / 1366 * 100%), 1500px);
+  width: clamp(900px, calc(1170 / 1366 * 100%), 1250px);
 
   @media (max-width: $breakpoint-tablet) {
     width: clamp(678px, calc(678 / 768 * 100%), 900px);

@@ -1,70 +1,209 @@
 .blog__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 200px 0;
+  padding-top: 98px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 49px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width: 470px;
+    padding-top: 46px;
+  }
 }
 
-.blog__posts-list {
+.blog__heading {
+  margin-bottom: 20px;
+}
+
+.blog__read-link {
+  margin-bottom: 64px;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 54px;
+  }
+}
+
+.blog__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: calc(30 / 1170 * 100%);
+  row-gap: 30px;
   padding: 0;
   margin: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: calc(30 / 1170 * 100%);
-  row-gap: 30px;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+  }
 }
 
-.blog__posts-item {
-  outline: 1px solid red;
-  text-align: center;
-
+.blog__list-item {
   &--big {
-    grid-column-start: 1;
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+  }
 
-    .blog__content-wrapper {
-      top: auto;
-      bottom: 0;
+  @media (max-width: $breakpoint-tablet) {
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
     }
   }
 }
 
-.blog__height-wrapper {
+.blog__post {
   display: flex;
   position: relative;
-  padding-top: calc(300 / 570 * 100%);
+  height: 100%;
+
+  &--content-left {
+    flex-direction: row-reverse;
+  }
+
+  &--big {
+    height: 100%;
+    z-index: 1;
+
+    .blog__img-wrapper {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: $breakpoint-tablet) {
+        position: relative;
+        width: 50%;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    img {
+      height: 100%;
+    }
+
+    .blog__content-wrapper {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+      height: calc(300 / 630 * 100%);
+      padding-bottom: 73px;
+
+      @media (max-width: $breakpoint-tablet) {
+        position: relative;
+        height: auto;
+        width: 50%;
+        padding-bottom: 40px;
+      }
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+        padding-top: 62px;
+        padding-bottom: 69px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    display: block;
+  }
+}
+
+.blog__img-wrapper {
+  width: 50%;
+
+  @media (max-width: $breakpoint-tablet) {
+    min-height: 300px;
+    max-height: 330px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    min-height: auto;
+    max-height: 290px;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+.blog__img-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .blog__content-wrapper {
-  position: absolute;
-  top: 0;
-  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 50%;
-  height: 100%;
   background-color: $color-accent-light;
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 40px;
+
+  @media (max-width: 1300px) {
+    padding: 30px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    padding: 45px;
+    padding-bottom: 53px;
+  }
 }
 
-.blog__posts-item time {
+.blog__content-wrapper time {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
-  color: $color-input-placeholder;
-  margin-bottom: 25px;
+  margin-bottom: 13px;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include fluid-font(768px, 1023px, 14px, 16px);
+  }
 }
 
-.blog__posts-item h4 {
+.blog__content-wrapper h4 {
   font-family: $font-cormorant;
   font-weight: 600;
   font-size: 26px;
   line-height: 130%;
+  max-width: 163px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  @include fluid-font(1024px, 1366px, 23px, 26px);
+
+  @media (max-width: 1300px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    @include fluid-font(768px, 1023px, 26px, 28px);
+    max-width: 100%;
+    width: clamp(163px, 60%, 250px);
+  }
 }
 
-.blog__img-wrapper {
-  position: absolute;
-  top: 0;
-  background-color: red;
-  width: 50%;
-  height: 100%;
+.blog__content-wrapper a {
+  margin: 0;
 }

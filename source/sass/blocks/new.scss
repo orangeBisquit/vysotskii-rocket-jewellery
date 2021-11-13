@@ -1,67 +1,110 @@
+.new {
+  width: 100vw;
+  overflow-y: hidden;
+}
+
 .new__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 130px;
-  padding-bottom: 200px;
-  outline: 1px solid red;
-}
-
-.new__shop-link {
-  margin-bottom: 60px;
-}
-
-.new__products-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.new__products-list {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 50px;
-  list-style-type: none;
-  margin-right: -30px;
-  overflow-x: scroll;
-  width: 100%;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-
-}
-
-.new__products-item {
-  min-width: calc(270 / 1170 * 100%);
-  margin-right: calc(30 / 1170 * 100%);
+  padding-top: 120px;
 
   @media (max-width: $breakpoint-tablet) {
-    min-width: calc(324 / 678 * 100%);
-    ;
-    margin-right: calc(30 / 678 * 100%);
+    padding-top: 70px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 60px;
   }
 }
 
-.new__products-item img {
-  display: block;
-  margin-bottom: 25px;
+.new .new__slider {
   width: 100%;
-  height: auto;
 }
 
-.new__products-item h4 {
+.new .new__slides-list {
+  position: relative;
+  z-index: 2;
   margin: 0;
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-size: 14px;
+  margin-bottom: 60px;
+  padding: 0;
+  list-style: none;
+  overflow: visible;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 45px;
+  }
+}
+
+.new .new__slides-item {
+  position: relative;
+  z-index: 3;
+  overflow: visible;
+  width: calc(270 / 1170 * 100%);
+
+  @media (max-width: $breakpoint-tablet) {
+    width: calc(324 / 678 * 100%);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: calc(130 / 290 * 100%);
+  }
+}
+
+.new__slides-item a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    img {
+      transform: scale(1.04);
+    }
+    h4,
+    p {
+      color: $color-accent;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+
+    img {
+      transform: scale(1.04);
+    }
+    h4,
+    p {
+      color: $color-accent;
+    }
+  }
+}
+
+.new__slides-item img {
+  display: block;
+  margin-bottom: 21px;
+  width: 100%;
+  height: auto;
+  transition: 0.15s ease;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 17px;
+  }
+}
+
+.new__slides-item h4 {
+  margin: 0;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 130%;
   text-align: center;
 }
 
-.new__products-item p {
+.new__slides-item p {
+  margin: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 130%;
@@ -69,26 +112,78 @@
 }
 
 .new__pages-list {
-  display: inline-block;
   display: flex;
   margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
-.new__pages-item {
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
+.new__pagination {
+  position: relative;
 }
 
-.new__pages-item a {
-  display: inline-block;
-  vertical-align: middle;
+.new__pagination-item {
+  padding: 5px;
+  background: transparent !important;
+  font-family: $font-poppins;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
   color: $color-input-placeholder;
-  text-decoration: none;
-  padding: 5px;
+  margin-right: 2px;
+  border: 0;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: 2px solid $color-accent;
+  }
+}
+
+.new__pagination-item--current {
+  color: $color-text;
+}
+
+.new__button {
+  position: absolute;
+  top: 157px;
+  width: 29px;
+  height: 25px;
+  background-image: url("../img/icons/icon-slider-arrow.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 0;
+  border: 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    top: 113px;
+    width: 37px;
+    height: 14px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+    transform: rotate(180deg);
+  }
+
+  &:focus,
+  &:hover {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
 }
