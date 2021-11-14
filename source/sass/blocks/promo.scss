@@ -90,3 +90,21 @@
     font-size: 34px;
   }
 }
+
+.promo--catalog {
+  .promo__wrapper {
+    padding-top: 92px;
+  }
+
+  .promo__heading {
+    font-size: 34px;
+    line-height: 130%;
+    letter-spacing: 0;
+  }
+
+  .promo__descr {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 130%;
+  }
+}

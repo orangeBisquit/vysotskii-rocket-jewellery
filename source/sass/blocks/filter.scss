@@ -1,0 +1,95 @@
+.filter__wrapper {
+  margin-bottom: 35px;
+}
+
+.filter__category {
+  padding: 25px;
+  padding-top: 23px;
+  padding-left: 19px;
+  margin: 0;
+  border: 1px solid $color-accent;
+  min-height: 100px;
+
+  &:not(:first-child) {
+    border-top: 0;
+  }
+}
+
+.filter__category button {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 22px;
+  border: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: left;
+  background-color: transparent;
+
+  @include pseudo(before) {
+    width: 15px;
+    height: 8px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/icons/icon-accordeon-arrow.svg");
+    background-size: cover;
+  }
+}
+
+.filter__field {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.filter__field--checkbox {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+
+    @include pseudo(before) {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 16px;
+      height: 15px;
+      border: 1px solid $color-accent;
+      transition: 0.15s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $color-accent;
+    }
+  }
+
+  input:checked + label::before {
+    width: 14px;
+    background-color: $color-accent;
+  }
+}
+
+.filter__button-apply,
+.filter__button-clear {
+  display: block;
+  width: 100%;
+  padding: 28px 10px;
+  border: 1px solid $color-accent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  background-color: transparent;
+}
+
+.filter__button-apply {
+  margin-bottom: 25px;
+  background-color: $color-accent;
+  color: $color-white;
+}
