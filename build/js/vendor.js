@@ -1,4 +1,4 @@
-import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js';
+import Swiper from 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.esm.browser.min.js';
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
