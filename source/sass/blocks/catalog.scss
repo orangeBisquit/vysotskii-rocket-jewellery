@@ -214,8 +214,11 @@
     font-size: 16px;
     line-height: 130%;
 
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
+      opacity: 0.8;
+      color: $color-white;
     }
   }
 
