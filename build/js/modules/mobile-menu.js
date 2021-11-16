@@ -2,9 +2,13 @@ const menuContainer = document.querySelector('.mobile-menu');
 const menuToggle = menuContainer.querySelector('.header__menu-toggle');
 const body = document.querySelector('body');
 
-menuToggle.addEventListener('click', () => {
+const mobileMenuToggle = () => {
   menuContainer.classList.toggle('mobile-menu--active');
   body.classList.toggle('no-scroll');
+};
+
+menuToggle.addEventListener('click', () => {
+  mobileMenuToggle();
 });
 
 const searchInput = menuContainer.querySelector('#header-search');
@@ -13,12 +17,14 @@ const searchTabUp = menuContainer.querySelector('#searchTabUpTarget');
 const lastInteractiveElement = menuContainer.querySelector('#lastTabDown');
 const firstInteractiveElement = menuToggle;
 
+
 menuContainer.addEventListener('keydown', (evt) => {
   const isTabUp = evt.shiftKey && evt.keyCode === 9;
   const isTabDown = evt.keyCode === 9 && !evt.shiftKey;
   const current = document.activeElement;
+  const isMenuOpen = menuContainer.classList.contains('mobile-menu--active');
 
-  if (isTabUp) {
+  if (isTabUp && isMenuOpen) {
     if (current === searchTabDown) {
       evt.preventDefault();
       searchInput.focus();
@@ -34,7 +40,7 @@ menuContainer.addEventListener('keydown', (evt) => {
     }
   }
 
-  if (isTabDown) {
+  if (isTabDown && isMenuOpen) {
     if (current === searchTabUp) {
       evt.preventDefault();
       searchInput.focus();
@@ -49,4 +55,10 @@ menuContainer.addEventListener('keydown', (evt) => {
       firstInteractiveElement.focus();
     }
   }
+
+  if (isMenuOpen && evt.key === 'Escape') {
+    mobileMenuToggle();
+  }
 });
+
+export { mobileMenuToggle };

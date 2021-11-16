@@ -1,0 +1,67 @@
+.js-disabled {
+  .js-disabled__menu {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .js-disabled__slider-buttons {
+    display: none;
+  }
+
+  .js-disabled__slider {
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 35px;
+    }
+  }
+
+  .js-disabled__accordeon-buttons {
+    &:hover {
+      color: $color-text;
+      cursor: default;
+
+      span {
+        border-bottom-color: $color-white;
+      }
+    }
+
+    &:focus {
+      outline: 0;
+    }
+    &::before {
+      display: none;
+    }
+  }
+
+  .js-disabled__accordeon-content {
+    display: block;
+  }
+
+  .js-disabled__filter-toggle {
+    display: none;
+  }
+
+  .js-disabled__filter {
+    @media (max-width: $breakpoint-tablet) {
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      max-width: 60%;
+      margin-bottom: 50px;
+      border-top: 1px solid $color-accent;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $color-accent;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 70%;
+      min-width: 290px;
+    }
+  }
+
+  .js-disabled__filter-content {
+    display: block;
+  }
+}

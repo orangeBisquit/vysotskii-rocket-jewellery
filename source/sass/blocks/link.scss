@@ -17,4 +17,14 @@
   @media (max-width: $breakpoint-mobile) {
     margin-bottom: 44px;
   }
+
+  &:hover {
+    color: $color-accent;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 2px solid $color-accent;
+    outline-offset: 5px;
+  }
 }

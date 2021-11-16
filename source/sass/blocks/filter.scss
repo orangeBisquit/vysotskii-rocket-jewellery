@@ -1,40 +1,119 @@
-.filter__wrapper {
-  margin-bottom: 35px;
-}
-
-.filter__category {
-  padding: 25px;
-  padding-top: 23px;
-  padding-left: 19px;
-  margin: 0;
-  border: 1px solid $color-accent;
-  min-height: 100px;
-
-  &:not(:first-child) {
-    border-top: 0;
+.filter {
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
   }
 }
 
-.filter__category button {
+.filter__wrapper {
+  margin-bottom: 32px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 28px;
+  }
+}
+
+.filter__category {
+  padding: 0;
+  padding-top: 23px;
+  padding-left: 19px;
+  padding-right: 25px;
+  padding-bottom: 22px;
+  margin: 0;
+  border: 1px solid $color-accent;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-left: 15px;
+    padding-right: 48px;
+    padding-top: 33px;
+    padding-bottom: 32px;
+    border-left: 0;
+    border-right: 0;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 22px;
+    padding-right: 19px;
+    padding-bottom: 24px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
+
+  &--active {
+    .filter__category-wrapper {
+      display: block;
+    }
+
+    .filter__category-toggle::before {
+      transform: translateY(-50%) rotate(0);
+    }
+  }
+}
+
+.filter__category-wrapper {
+  display: none;
+  padding-top: 22px;
+  margin-bottom: 5px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 24px;
+  }
+}
+
+.filter__category-toggle {
   display: block;
   position: relative;
   width: 100%;
-  margin-bottom: 22px;
   border: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
   text-align: left;
   background-color: transparent;
+  border-radius: 1px;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
 
   @include pseudo(before) {
     width: 15px;
     height: 8px;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(-180deg);
     background-image: url("../img/icons/icon-accordeon-arrow.svg");
     background-size: cover;
+    transition: 0.3s ease;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 23px;
+      height: 12px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $color-accent;
+  }
+
+  &:focus {
+    outline: 2px solid $color-accent;
+    outline-offset: 7px;
+  }
+
+  &:focus:active {
+    outline-offset: 4px;
   }
 }
 
@@ -44,7 +123,13 @@
 }
 
 .filter__field--checkbox {
-  margin-bottom: 15px;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 18px;
+    }
+  }
 
   label {
     display: block;
@@ -54,14 +139,25 @@
     font-size: 14px;
     line-height: 120%;
 
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 16px;
+      padding-left: 30px;
+      line-height: 130%;
+    }
+
     @include pseudo(before) {
       top: 50%;
       transform: translateY(-50%);
       left: 0;
-      width: 16px;
+      width: 15px;
       height: 15px;
       border: 1px solid $color-accent;
       transition: 0.15s ease;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 18px;
+        height: 18px;
+      }
     }
 
     &:hover {
@@ -71,8 +167,12 @@
   }
 
   input:checked + label::before {
-    width: 14px;
     background-color: $color-accent;
+  }
+
+  input:focus + label {
+    outline: 2px solid $color-accent;
+    outline-offset: 5px;
   }
 }
 
@@ -80,16 +180,214 @@
 .filter__button-clear {
   display: block;
   width: 100%;
-  padding: 28px 10px;
+  padding: 23px 10px;
   border: 1px solid $color-accent;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
   background-color: transparent;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width: 85%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .filter__button-apply {
   margin-bottom: 25px;
   background-color: $color-accent;
   color: $color-white;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 20px;
+  }
+}
+
+.filter__category--radio {
+  .filter__category-wrapper {
+    @media (max-width: $breakpoint-tablet) {
+      padding-top: 36px;
+      margin-bottom: 11px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-top: 32px;
+    }
+  }
+  .filter__field {
+    padding-left: 5px;
+    padding-bottom: 27px;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding-left: 16px;
+      padding-right: 47px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .filter__radio-slide {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: $color-accent-light;
+
+    @include pseudo(before) {
+      left: 30%;
+      width: 50%;
+      height: 1px;
+      background-color: $color-accent;
+
+      @media (max-width: $breakpoint-tablet) {
+        left: 20%;
+        width: 56%;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 52%;
+      }
+    }
+  }
+
+  .filter__radio-price {
+    position: absolute;
+    top: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+
+    @media (max-width: $breakpoint-tablet) {
+      top: 17px;
+      font-size: 16px;
+    }
+
+    &--low {
+      left: 26%;
+      transform: translateX(-50%);
+
+      @media (max-width: $breakpoint-tablet) {
+        left: 17%;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        left: 18%;
+      }
+    }
+
+    &--high {
+      left: 71%;
+
+      @media (max-width: $breakpoint-tablet) {
+        left: 69%;
+      }
+    }
+
+    @include pseudo(before) {
+      top: -21px;
+      left: 9px;
+      width: 15px;
+      height: 15px;
+      background-color: $color-accent;
+      border-radius: 50%;
+
+      @media (max-width: $breakpoint-tablet) {
+        top: -25px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &:focus {
+      outline: 2px solid $color-accent;
+      outline-offset: 3px;
+    }
+
+    &:hover {
+      color: $color-accent;
+      cursor: pointer;
+    }
+  }
+}
+
+.filter__button-close {
+  display: none;
+}
+
+.filter--open {
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .filter__overlay {
+      position: absolute;
+      width: calc(430 / 767 * 100%);
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-white;
+      box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+      min-height: 830px;
+    }
+
+    .filter__button-close {
+      display: block;
+      position: absolute;
+      top: -15px;
+      right: -8px;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      background-color: $color-black;
+      border-radius: 50%;
+      background-image: url("../img/icons/icon-close.svg");
+      background-size: 14px 14px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media (max-width: $breakpoint-mobile) {
+        top: -16px;
+        right: -10px;
+      }
+
+      &:hover {
+        background-color: $color-red;
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: 2px solid $color-accent;
+        background-color: $color-red;
+        outline-offset: 5px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .filter__overlay {
+      top: 76px;
+      width: clamp(270px, calc(270 / 320 * 100%), 430px);
+      min-height: 736px;
+    }
+  }
 }

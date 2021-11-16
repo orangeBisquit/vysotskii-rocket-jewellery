@@ -20,10 +20,10 @@
   <title>CH Jewellery Store</title>
 </head>
 
-<body>
-  <header class="header mobile-menu">
+<body class="js-disabled">
+  <header class="header mobile-menu mobile-menu--active js-disabled__menu">
     <div class="header__wrapper wrapper">
-      <div class="header__top-container">
+      <div class="header__top-container mobile-menu__top-container">
         <div class="header__search-container mobile-menu__search-container">
           <input id="header-search" name="header-search" type="search" placeholder="Type here to search">
           <svg width="14" height="14">
@@ -40,7 +40,7 @@
           </svg>
         </a>
         <div class="header__user-container">
-          <a href="#" class="header__user-button">Login</a>
+          <a href="login.html" class="header__user-button">Login</a>
           <a href="#" class="header__cart-button  mobile-menu__cart-button" id="searchTabUpTarget">
             <svg width="20" height="18">
               <use xlink:href="img/sprite/sprite_auto.svg#icon-cart"></use>
@@ -79,9 +79,35 @@
           <a href="#">Contact Us</a>
         </li>
       </ul>
-      <a href="#" id="lastTabDown" class="header__sub-login-button wrapper">Login</a>
-      
-  </nav></header>
+      <div class="header__sub-login-wrapper wrapper">
+        <a href="login.html" id="lastTabDown" class="header__sub-login-button">Login</a>
+      </div>
+    </nav>
+    <section class="login">
+      <div class="login__wrapper">
+        <h2 class="login__heading">Log In</h2>
+        <button class="login__button-close" type="button"></button>
+        <form class="login__form">
+          <p class="login__field">
+            <input id="login-email" name="login-email" type="email" placeholder="Your E-mail" required="">
+            <label class="visually-hidden" for="login-email">Your E-mail</label>
+          </p>
+          <p class="login__field login__field--password">
+            <input id="login-password" name="login-password" type="text" placeholder="Password" required="">
+            <label class="visually-hidden" for="login-password">Your Password</label>
+          </p>
+          <div class="login__forgot-wrapper">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <button class="login__button-submit" type="submit">Log In</button>
+          <div class="login__sign-up-wrapper">
+            <p>Don’t have an account?</p>
+            <a href="#">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </header>
   <main class="main">
     <section class="promo">
       <div class="promo__wrapper wrapper">
@@ -97,12 +123,12 @@
         <h3 class="new__heading heading">New In</h3>
         <a href="catalog.html" class="new__shop-link link">Shop Now</a>
         <!-- Swiper SLider Library -->
-        <button class="new__button new__button--prev swiper-button-prev" aria-label="previous products"></button>
-        <button class="new__button new__button--next swiper-button-next" aria-label="next products"></button>
+        <button class="new__button new__button--prev swiper-button-prev js-disabled__slider-buttons" aria-label="previous products"></button>
+        <button class="new__button new__button--next swiper-button-next js-disabled__slider-buttons" aria-label="next products"></button>
         <div class="new__slider swiper">
 
           <!-- Additional required wrapper -->
-          <ul class="new__slides-list swiper-wrapper">
+          <ul class="new__slides-list js-disabled__slider swiper-wrapper">
             <!-- Slides -->
             <li class="new__slides-item swiper-slide">
               <a href="catalog.html" aria-label="product page link">
@@ -384,7 +410,8 @@
               </div>
             </article>
           </li>
-      </ul></div>
+        </ul>
+      </div>
     </section>
     <section class="questions">
       <div class="questions__wrapper">
@@ -392,32 +419,36 @@
 
         <ul class="questions__list">
           <li class="questions__list-item">
-            <button>
+            <button class="js-disabled__accordeon-buttons">
               <span>What materials are the jewellery made of?</span>
             </button>
-            <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            <p class="js-disabled__accordeon-content">Our jewellerry is made of solid gold, silver or leather. Also,
+              some jewellery contains precious and
               semiprecious stones
               and crystals.</p>
           </li>
           <li class="questions__list-item questions__list-item--countries">
-            <button>
+            <button class="js-disabled__accordeon-buttons">
               <span>Which countries do you deliver to?</span>
             </button>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum amet voluptatibus dignissimos placeat
+            <p class="js-disabled__accordeon-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              amet voluptatibus dignissimos placeat
               corrupti neque facilis molestiae!</p>
           </li>
           <li class="questions__list-item">
-            <button>
+            <button class="js-disabled__accordeon-buttons">
               <span>What are the payment methods?</span>
             </button>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident exercitationem ratione velit
+            <p class="js-disabled__accordeon-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Provident exercitationem ratione velit
               perspiciatis voluptatum facere expedita!</p>
           </li>
           <li class="questions__list-item questions__list-item--return">
-            <button>
+            <button class="js-disabled__accordeon-buttons">
               <span>Can I return the <br> jewellery if it didn’t fit me?</span>
             </button>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt sint expedita voluptas temporibus
+            <p class="js-disabled__accordeon-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              sunt sint expedita voluptas temporibus
               placeat obcaecati reiciendis veniam.</p>
           </li>
         </ul>

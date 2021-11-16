@@ -120,6 +120,12 @@
 
 .new__pagination {
   position: relative;
+
+  @media (max-width: $breakpoint-mobile) {
+    span {
+      appearance: none;
+    }
+  }
 }
 
 .new__pagination-item {
@@ -148,7 +154,7 @@
   position: absolute;
   top: 157px;
   width: 29px;
-  height: 25px;
+  height: 9px;
   background-image: url("../img/icons/icon-slider-arrow.svg");
   background-position: center;
   background-size: cover;
@@ -184,6 +190,6 @@
   &:focus,
   &:hover {
     outline: 2px solid $color-accent;
-    outline-offset: 3px;
+    outline-offset: 5px;
   }
 }

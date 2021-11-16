@@ -1,53 +1,79 @@
 .mobile-menu--active {
-  background-color: $color-accent;
-  height: 100vh;
-  overflow-x: scroll;
+  @media (max-width: $breakpoint-tablet) {
+    width: auto;
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 
-  .mobile-menu__toggle {
-    span {
-      background-color: $color-white;
+    &::-webkit-scrollbar {
+      display: none; /* Chrome */
     }
 
-    span::before,
-    span::after {
-      background-color: $color-white;
+    background-color: $color-accent;
+
+    .mobile-menu__top-container {
+      padding-bottom: 30px;
     }
 
-    &:focus {
-      outline-color: $color-white;
+    .mobile-menu__toggle {
+      span {
+        background-color: $color-white;
+      }
+
+      span::before,
+      span::after {
+        background-color: $color-white;
+      }
+
+      &:focus {
+        outline-color: $color-white;
+      }
     }
-  }
 
-  .mobile-menu__logo {
-    svg {
-      transition: all 0.2s ease;
-      fill: $color-white;
+    .mobile-menu__logo {
+      svg {
+        transition: all 0.2s ease;
+        fill: $color-white;
+      }
+
+      &[href]:hover,
+      &:focus {
+        outline: 2px solid $color-white;
+        outline-offset: 10px;
+      }
     }
-  }
 
-  .mobile-menu__cart-button {
-    svg {
-      transition: all 0.2s ease;
-      stroke: $color-white;
+    .mobile-menu__cart-button {
+      svg {
+        transition: all 0.2s ease;
+        stroke: $color-white;
+      }
+
+      &:focus,
+      &:hover {
+        outline: 2px solid $color-white;
+        outline-offset: 5px;
+      }
     }
-  }
 
-  .mobile-menu__search-container {
-    display: block;
-    margin-top: 40px;
-    order: 1;
-    width: 100%;
+    .mobile-menu__search-container {
+      display: block;
+      margin-top: 40px;
+      order: 1;
+      width: 100%;
 
-    @media (max-width: $breakpoint-mobile) {
-      margin-top: 24px;
+      @media (max-width: $breakpoint-mobile) {
+        margin-top: 24px;
+      }
     }
-  }
 
-  .mobile-menu__nav {
-    display: block;
-  }
+    .mobile-menu__nav {
+      display: block;
+    }
 
-  .mobile-menu__sub-nav {
-    display: block;
+    .mobile-menu__sub-nav {
+      display: block;
+    }
   }
 }

@@ -27,7 +27,8 @@
     }
   }
 
-  &--catalog {
+  &--catalog,
+  &--login {
     min-height: 261px;
     background-image: url("../img/promo-catalog-desktop-1x.jpg");
 
@@ -50,6 +51,10 @@
         background-image: url("../img/promo-catalog-mobile-2x.jpg");
       }
     }
+  }
+
+  &--login {
+    min-height: 190px;
   }
 }
 
@@ -94,6 +99,10 @@
 .promo--catalog {
   .promo__wrapper {
     padding-top: 92px;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-top: 80px;
+    }
   }
 
   .promo__heading {

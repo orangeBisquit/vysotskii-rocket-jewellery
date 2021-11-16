@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="//FIXME">
+
+  <link type="font/woff2" href="fonts/poppins-v15-latin-regular.woff2" rel="prefetch" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/poppins-v15-latin-500.woff2" rel="prefetch" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/poppins-v15-latin-700.woff2" rel="prefetch" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-italic.woff2" rel="prefetch" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-500italic.woff2" rel="prefetch" as="font"
+    crossorigin>
+  <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-600.woff2" rel="prefetch" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-700.woff2" rel="prefetch" as="font" crossorigin>
+
+  <link href="css/style.min.css" rel="stylesheet">
+  <title>CH Jewellery Store</title>
+</head>
+
+<body class="js-disabled">
+  <header class="header mobile-menu js-disabled__menu mobile-menu--active">
+    <div class="header__wrapper wrapper">
+      <div class="header__top-container mobile-menu__top-container">
+        <div class="header__search-container mobile-menu__search-container">
+          <input id="header-search" name="header-search" type="search" placeholder="Type here to search">
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite/sprite_auto.svg#icon-search"></use>
+          </svg>
+          <label class="visually-hidden" for="header-search">Search</label>
+        </div>
+        <button class="header__menu-toggle mobile-menu__toggle">
+          <span class="header__menu-visual"></span>
+        </button>
+        <a class="header__logo mobile-menu__logo" href="index.html">
+          <svg width="66" height="66">
+            <use xlink:href="img/sprite/sprite_auto.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <div class="header__user-container">
+          <a href="#" class="header__cart-button  mobile-menu__cart-button" id="searchTabUpTarget">
+            <svg width="20" height="18">
+              <use xlink:href="img/sprite/sprite_auto.svg#icon-cart"></use>
+            </svg>
+            <span class="header__user-button-text">Cart <span> 0</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="header__menu mobile-menu__nav">
+      <ul class="header__menu-list wrapper">
+        <li class="header__menu-item">
+          <a id="searchTabDownTarget" href="#">What’s new</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="catalog.html">Chokers</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="catalog.html">Necklaces</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="catalog.html">Rings</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="catalog.html">Earrings</a>
+        </li>
+      </ul>
+      <ul class="header__sub-list mobile-menu__sub-nav wrapper">
+        <li class="header__sub-item">
+          <a href="#">About CH</a>
+        </li>
+        <li class="header__sub-item">
+          <a href="#">Stores & Hours</a>
+        </li>
+        <li class="header__sub-item">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+      <div class="header__sub-login-wrapper wrapper">
+      </div>
+    </nav>
+
+  </header>
+  <main class="main">
+    <section class="promo promo--login">
+      <div class="promo__wrapper promo__wrapper--catalog wrapper">
+        <h1 class="visually-hidden">CH Jewellery Store Catalog</h1>
+      </div>
+    </section>
+    <section class="login login--nojs">
+      <div class="login__wrapper">
+        <h2 class="login__heading">Log In</h2>
+        <button class="login__button-close" type="button"></button>
+        <form class="login__form">
+          <p class="login__field">
+            <input id="login-email" name="login-email" type="email" placeholder="Your E-mail" required>
+            <label class="visually-hidden" for="login-email">Your E-mail</label>
+          </p>
+          <p class="login__field login__field--password">
+            <input id="login-password" name="login-password" type="text" placeholder="Password" required>
+            <label class="visually-hidden" for="login-password">Your Password</label>
+          </p>
+          <div class="login__forgot-wrapper">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <button class="login__button-submit" type="submit">Log In</button>
+          <div class="login__sign-up-wrapper">
+            <p>Don’t have an account?</p>
+            <a href="#">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper wrapper">
+      <form class="footer__mailing-wrapper">
+        <h3>The good stuff in your inbox</h3>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <div class="footer__input-wrapper">
+          <input id="sub-email" type="email" placeholder="Your E-mail">
+          <label class="visually-hidden" for="sub-email">Your email address</label>
+          <button type="submit">Sign Up
+            <svg width="29" height="9">
+              <use xlink:href="img/sprite/sprite_auto.svg#icon-footer-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <nav class="footer__menu-wrapper">
+        <ul class="footer__menu-list">
+          <li class="footer__menu-column">
+            <ul class="footer__column-list footer__column-list--ordering">
+              <li class="footer__column-item">
+                <a href="#"><span>Ordering & Payment</span></a>
+              </li>
+              <li class="footer__column-item">
+                <a href="#"><span>Terms & Conditions</span></a>
+              </li>
+              <li class="footer__column-item">
+                <a href="#"><span>Returns & Exchanges</span></a>
+              </li>
+              <li class="footer__column-item">
+                <a href="#"><span>Delivery</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__menu-column">
+            <ul class="footer__column-list">
+              <li class="footer__column-item">
+                <a href="#"><span>About CH</span></a>
+              </li>
+              <li class="footer__column-item">
+                <a href="#"><span>Stores & Hours</span></a>
+              </li>
+              <li class="footer__column-item">
+                <a href="#"><span>Jobs</span></a>
+              </li>
+              <li class="footer__column-item">
+                <a href="#"><span>Contact Us</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__menu-column footer__social">
+            <ul class="footer__column-list">
+              <li class="footer__column-item footer__column-item--facebook">
+                <a href="#">
+                  <svg width="8" height="15">
+                    <use xlink:href="img/sprite/sprite_auto.svg#icon-facebook"></use>
+                  </svg>
+                  <span>Facebook</span></a>
+              </li>
+              <li class="footer__column-item footer__column-item--instagram">
+                <a href="#">
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite/sprite_auto.svg#icon-instagram"></use>
+                  </svg>
+                  <span>Instagram</span></a>
+              </li>
+              <li class="footer__column-item footer__column-item--pinterest">
+                <a href="#">
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite/sprite_auto.svg#icon-pinterest"></use>
+                  </svg>
+                  <span>Pinterest</span></a>
+              </li>
+              <li class="footer__column-item footer__column-item--twitter">
+                <a href="#">
+                  <svg width="15" height="13">
+                    <use xlink:href="img/sprite/sprite_auto.svg#icon-twitter"></use>
+                  </svg>
+                  <span>Twitter</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/vendor.js"></script>
+</body>
+
+</html>

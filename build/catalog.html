@@ -19,8 +19,8 @@
   <title>CH Jewellery Store</title>
 </head>
 
-<body>
-  <header class="header mobile-menu">
+<body class="js-disabled">
+  <header class="header mobile-menu mobile-menu--active">
     <div class="header__wrapper wrapper">
       <div class="header__top-container">
         <div class="header__search-container mobile-menu__search-container">
@@ -39,7 +39,7 @@
           </svg>
         </a>
         <div class="header__user-container">
-          <a href="#" class="header__user-button">Login</a>
+          <a href="login.html" class="header__user-button">Login</a>
           <a href="#" class="header__cart-button  mobile-menu__cart-button" id="searchTabUpTarget">
             <svg width="20" height="18">
               <use xlink:href="img/sprite/sprite_auto.svg#icon-cart"></use>
@@ -78,10 +78,36 @@
           <a href="#">Contact Us</a>
         </li>
       </ul>
-      <a href="#" id="lastTabDown" class="header__sub-login-button wrapper">Login</a>
-      
+      <div class="header__sub-login-wrapper wrapper">
+        <a href="login.html" id="lastTabDown" class="header__sub-login-button">Login</a>
+      </div>
+    </nav>
+    <section class="login">
+      <div class="login__wrapper">
+        <h2 class="login__heading">Log In</h2>
+        <button class="login__button-close" type="button"></button>
+        <form class="login__form">
+          <p class="login__field">
+            <input id="login-email" name="login-email" type="email" placeholder="Your E-mail" required="">
+            <label class="visually-hidden" for="login-email">Your E-mail</label>
+          </p>
+          <p class="login__field login__field--password">
+            <input id="login-password" name="login-password" type="text" placeholder="Password" required="">
+            <label class="visually-hidden" for="login-password">Your Password</label>
+          </p>
+          <div class="login__forgot-wrapper">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <button class="login__button-submit" type="submit">Log In</button>
+          <div class="login__sign-up-wrapper">
+            <p>Don’t have an account?</p>
+            <a href="#">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </section>
 
-  </nav></header>
+  </header>
   <main class="main">
     <section class="promo promo--catalog">
       <div class="promo__wrapper promo__wrapper--catalog wrapper">
@@ -94,58 +120,75 @@
     </section>
     <section class="catalog">
       <div class="catalog__wrapper wrapper">
-        <form class="catalog__filter filter">
-          <div class="filter__wrapper">
-            <fieldset class="filter__category">
-              <button>Product</button>
-              <p class="filter__field filter__field--checkbox">
-                <input class="visually-hidden" id="product-necklaces" type="checkbox" name="Necklaces" checked="">
-                <label for="product-necklaces">Necklaces</label>
-              </p>
-              <p class="filter__field filter__field--checkbox">
-                <input class="visually-hidden" id="product-chokers" type="checkbox" name="Chokers" checked="">
-                <label for="product-chokers">Chokers</label>
-              </p>
-              <p class="filter__field filter__field--checkbox">
-                <input class="visually-hidden" id="product-rings" type="checkbox" name="Rings">
-                <label for="product-rings">Rings</label>
-              </p>
-              <p class="filter__field filter__field--checkbox">
-                <input class="visually-hidden" id="product-earrings" type="checkbox" name="Earrings" checked="">
-                <label for="product-earrings">Earrings</label>
-              </p>
-            </fieldset>
-            <fieldset class="filter__category">
-              <button>Material</button>
-              <p class="filter__field filter__field--checkbox">
-                <input class="visually-hidden" id="material-gold" type="checkbox" name="Gold">
-                <label for="material-gold">Gold</label>
-              </p>
-              <p class="filter__field filter__field--checkbox">
-                <input class="visually-hidden" id="material-silver" type="checkbox" name="Silver">
-                <label for="material-silver">Silver</label>
-              </p>
-            </fieldset>
-            <fieldset class="filter__category">
-              <button>Collection</button>
-              <p class="filter__field filter__field--checkbox">
-                <input class="visually-hidden" id="collection-pink-flamingo" type="checkbox" name="Pink flamingo">
-                <label for="collection-pink-flamingo">Pink flamingo</label>
-              </p>
-              <p class="filter__field filter__field--checkbox">
-                <input class="visually-hidden" id="collection-dreams" type="checkbox" name="Dreams">
-                <label for="collection-dreams">Dreams</label>
-              </p>
-            </fieldset>
-            <fieldset class="filter__category">
-              <button>Price</button>
-              <p class="filter__field filter__field--radio" tabindex="0">
-                12345
-              </p>
-            </fieldset>
+        <button class="catalog__filter-toggle js-disabled__filter-toggle">Filter</button>
+        <form class="catalog__filter filter js-disabled__filter">
+          <div class="filter__overlay">
+            <button class="filter__button-close" type="button" aria-label="Close Filter"></button>
+            <div class="filter__wrapper">
+              <fieldset class="filter__category filter__category--active">
+                <button class="filter__category-toggle" type="button">Product</button>
+                <div class="filter__category-wrapper js-disabled__filter-content">
+                  <p class="filter__field filter__field--checkbox">
+                    <input class="visually-hidden" id="product-necklaces" type="checkbox" name="Necklaces" checked="">
+                    <label for="product-necklaces">Necklaces</label>
+                  </p>
+                  <p class="filter__field filter__field--checkbox">
+                    <input class="visually-hidden" id="product-chokers" type="checkbox" name="Chokers" checked="">
+                    <label for="product-chokers">Chokers</label>
+                  </p>
+                  <p class="filter__field filter__field--checkbox">
+                    <input class="visually-hidden" id="product-rings" type="checkbox" name="Rings">
+                    <label for="product-rings">Rings</label>
+                  </p>
+                  <p class="filter__field filter__field--checkbox">
+                    <input class="visually-hidden" id="product-earrings" type="checkbox" name="Earrings" checked="">
+                    <label for="product-earrings">Earrings</label>
+                  </p>
+                </div>
+              </fieldset>
+              <fieldset class="filter__category">
+                <button class="filter__category-toggle" type="button">Material</button>
+                <div class="filter__category-wrapper js-disabled__filter-content">
+                  <p class="filter__field filter__field--checkbox">
+                    <input class="visually-hidden" id="material-gold" type="checkbox" name="Gold">
+                    <label for="material-gold">Gold</label>
+                  </p>
+                  <p class="filter__field filter__field--checkbox">
+                    <input class="visually-hidden" id="material-silver" type="checkbox" name="Silver">
+                    <label for="material-silver">Silver</label>
+                  </p>
+                </div>
+              </fieldset>
+              <fieldset class="filter__category">
+                <button class="filter__category-toggle" type="button">Collection</button>
+                <div class="filter__category-wrapper js-disabled__filter-content">
+                  <p class="filter__field filter__field--checkbox">
+                    <input class="visually-hidden" id="collection-pink-flamingo" type="checkbox" name="Pink flamingo">
+                    <label for="collection-pink-flamingo">Pink flamingo</label>
+                  </p>
+                  <p class="filter__field filter__field--checkbox">
+                    <input class="visually-hidden" id="collection-dreams" type="checkbox" name="Dreams">
+                    <label for="collection-dreams">Dreams</label>
+                  </p>
+                </div>
+              </fieldset>
+              <fieldset class="filter__category filter__category--radio filter__category--active">
+                <button class="filter__category-toggle" type="button">Price</button>
+                <div class="filter__category-wrapper js-disabled__filter-content">
+                  <div class="filter__field">
+                    <div class="filter__radio-slide">
+                      <button class="filter__radio-price filter__radio-price--low" aria-label="Price minimum">$
+                        55</button>
+                      <button class="filter__radio-price filter__radio-price--high" aria-label="Price maximum">$
+                        155</button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <button class="filter__button-apply" type="button">Apply</button>
+            <button class="filter__button-clear" type="button">Clear All</button>
           </div>
-          <button class="filter__button-apply" type="button">Apply</button>
-          <button class="filter__button-clear" type="button">Clear All</button>
         </form>
         <div class="catalog__list-wrapper">
           <ul class="catalog__list">
@@ -336,9 +379,29 @@
                 <h4>Marble earrings</h4>
                 <p>$ 95</p>
               </a>
-
             </li>
           </ul>
+          <div class="catalog__pagination">
+            <button class="catalog__pagination-button catalog__pagination-button--prev">Previous</button>
+            <ul class="catalog__pagination-list">
+              <li class="catalog__pagination__item catalog__pagination__item--active">
+                <a>1</a>
+              </li>
+              <li class="catalog__pagination__item">
+                <a href="#">2</a>
+              </li>
+              <li class="catalog__pagination__item">
+                <a href="#">3</a>
+              </li>
+              <li class="catalog__pagination__item">
+                <a href="#">4</a>
+              </li>
+              <li class="catalog__pagination__item">
+                <a href="#">5</a>
+              </li>
+            </ul>
+            <button class="catalog__pagination-button catalog__pagination-button--next">Next</button>
+          </div>
         </div>
       </div>
     </section>

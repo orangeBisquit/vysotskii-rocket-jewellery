@@ -170,6 +170,9 @@
   @media (max-width: 1100px) {
     grid-template-columns: 1.6fr 1fr 1fr;
     column-gap: calc(40 / 582 * 100%);
+  }
+
+  @media (max-width: $breakpoint-tablet) {
     padding-top: 46px;
   }
 
