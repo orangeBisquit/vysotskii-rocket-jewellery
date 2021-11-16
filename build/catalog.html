@@ -30,7 +30,7 @@
           </svg>
           <label class="visually-hidden" for="header-search">Search</label>
         </div>
-        <button class="header__menu-toggle mobile-menu__toggle">
+        <button class="header__menu-toggle mobile-menu__toggle" aria-label="Open/Close mobile menu">
           <span class="header__menu-visual"></span>
         </button>
         <a href="index.html" class="header__logo mobile-menu__logo">
@@ -85,7 +85,7 @@
     <section class="login">
       <div class="login__wrapper">
         <h2 class="login__heading">Log In</h2>
-        <button class="login__button-close" type="button"></button>
+        <button class="login__button-close" type="button" aria-label="Open/Close mobile menu"></button>
         <form class="login__form">
           <p class="login__field">
             <input id="login-email" name="login-email" type="email" placeholder="Your E-mail" required="">
@@ -98,7 +98,8 @@
           <div class="login__forgot-wrapper">
             <a href="#">Forgot your password?</a>
           </div>
-          <button class="login__button-submit" type="submit">Log In</button>
+          <button class="login__button-submit" type="submit" aria-label="Login to your account with provided info">Log
+            In</button>
           <div class="login__sign-up-wrapper">
             <p>Don’t have an account?</p>
             <a href="#">Sign up</a>
@@ -120,13 +121,13 @@
     </section>
     <section class="catalog">
       <div class="catalog__wrapper wrapper">
-        <button class="catalog__filter-toggle js-disabled__filter-toggle">Filter</button>
+        <button class="catalog__filter-toggle js-disabled__filter-toggle" aria-label="Open filter menu">Filter</button>
         <form class="catalog__filter filter js-disabled__filter">
           <div class="filter__overlay">
-            <button class="filter__button-close" type="button" aria-label="Close Filter"></button>
+            <button class="filter__button-close" type="button" aria-label="Close Filter" aria="label=&quot;Close" filter="" menu"=""></button>
             <div class="filter__wrapper">
               <fieldset class="filter__category filter__category--active">
-                <button class="filter__category-toggle" type="button">Product</button>
+                <button class="filter__category-toggle js-disabled__accordeon-buttons" aria-label="Open/Close filter category" type="button">Product</button>
                 <div class="filter__category-wrapper js-disabled__filter-content">
                   <p class="filter__field filter__field--checkbox">
                     <input class="visually-hidden" id="product-necklaces" type="checkbox" name="Necklaces" checked="">
@@ -147,7 +148,7 @@
                 </div>
               </fieldset>
               <fieldset class="filter__category">
-                <button class="filter__category-toggle" type="button">Material</button>
+                <button class="filter__category-toggle js-disabled__accordeon-buttons" aria-label="Open/Close filter category" type="button">Material</button>
                 <div class="filter__category-wrapper js-disabled__filter-content">
                   <p class="filter__field filter__field--checkbox">
                     <input class="visually-hidden" id="material-gold" type="checkbox" name="Gold">
@@ -160,7 +161,7 @@
                 </div>
               </fieldset>
               <fieldset class="filter__category">
-                <button class="filter__category-toggle" type="button">Collection</button>
+                <button class="filter__category-toggle js-disabled__accordeon-buttons" aria-label="Open/Close filter category" type="button">Collection</button>
                 <div class="filter__category-wrapper js-disabled__filter-content">
                   <p class="filter__field filter__field--checkbox">
                     <input class="visually-hidden" id="collection-pink-flamingo" type="checkbox" name="Pink flamingo">
@@ -173,7 +174,7 @@
                 </div>
               </fieldset>
               <fieldset class="filter__category filter__category--radio filter__category--active">
-                <button class="filter__category-toggle" type="button">Price</button>
+                <button class="filter__category-toggle js-disabled__accordeon-buttons" aria-label="Open/Close filter category" type="button">Price</button>
                 <div class="filter__category-wrapper js-disabled__filter-content">
                   <div class="filter__field">
                     <div class="filter__radio-slide">
@@ -382,7 +383,7 @@
             </li>
           </ul>
           <div class="catalog__pagination">
-            <button class="catalog__pagination-button catalog__pagination-button--prev">Previous</button>
+            <button class="catalog__pagination-button catalog__pagination-button--prev" aria-label="Previous products page">Previous</button>
             <ul class="catalog__pagination-list">
               <li class="catalog__pagination__item catalog__pagination__item--active">
                 <a>1</a>
@@ -400,7 +401,7 @@
                 <a href="#">5</a>
               </li>
             </ul>
-            <button class="catalog__pagination-button catalog__pagination-button--next">Next</button>
+            <button class="catalog__pagination-button catalog__pagination-button--next" aria-label="Next products page">Next</button>
           </div>
         </div>
       </div>
@@ -414,7 +415,7 @@
         <div class="footer__input-wrapper">
           <input id="sub-email" type="email" placeholder="Your E-mail">
           <label class="visually-hidden" for="sub-email">Your email address</label>
-          <button type="submit">Sign Up
+          <button type="submit" aria-label="Create Account button">Sign Up
             <svg width="29" height="9">
               <use xlink:href="img/sprite/sprite_auto.svg#icon-footer-arrow"></use>
             </svg>

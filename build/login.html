@@ -30,7 +30,7 @@
           </svg>
           <label class="visually-hidden" for="header-search">Search</label>
         </div>
-        <button class="header__menu-toggle mobile-menu__toggle">
+        <button class="header__menu-toggle mobile-menu__toggle" aria-label="Open/Close mobile menu">
           <span class="header__menu-visual"></span>
         </button>
         <a class="header__logo mobile-menu__logo" href="index.html">
@@ -91,7 +91,6 @@
     <section class="login login--nojs">
       <div class="login__wrapper">
         <h2 class="login__heading">Log In</h2>
-        <button class="login__button-close" type="button"></button>
         <form class="login__form">
           <p class="login__field">
             <input id="login-email" name="login-email" type="email" placeholder="Your E-mail" required="">
@@ -104,7 +103,8 @@
           <div class="login__forgot-wrapper">
             <a href="#">Forgot your password?</a>
           </div>
-          <button class="login__button-submit" type="submit">Log In</button>
+          <button class="login__button-submit" type="submit" aria-label="Login to your account with provided info">Log
+            In</button>
           <div class="login__sign-up-wrapper">
             <p>Don’t have an account?</p>
             <a href="#">Sign up</a>
@@ -121,7 +121,7 @@
         <div class="footer__input-wrapper">
           <input id="sub-email" type="email" placeholder="Your E-mail">
           <label class="visually-hidden" for="sub-email">Your email address</label>
-          <button type="submit">Sign Up
+          <button type="submit" aria-label="Create Account button">Sign Up
             <svg width="29" height="9">
               <use xlink:href="img/sprite/sprite_auto.svg#icon-footer-arrow"></use>
             </svg>

@@ -31,7 +31,7 @@
           </svg>
           <label class="visually-hidden" for="header-search">Search</label>
         </div>
-        <button class="header__menu-toggle mobile-menu__toggle">
+        <button class="header__menu-toggle mobile-menu__toggle js-disabled__menu-toggle" aria-label="Open/Close mobile menu">
           <span class="header__menu-visual"></span>
         </button>
         <a class="header__logo mobile-menu__logo">
@@ -86,7 +86,7 @@
     <section class="login">
       <div class="login__wrapper">
         <h2 class="login__heading">Log In</h2>
-        <button class="login__button-close" type="button"></button>
+        <button class="login__button-close" type="button" aria-label="Close login form"></button>
         <form class="login__form">
           <p class="login__field">
             <input id="login-email" name="login-email" type="email" placeholder="Your E-mail" required="">
@@ -99,7 +99,8 @@
           <div class="login__forgot-wrapper">
             <a href="#">Forgot your password?</a>
           </div>
-          <button class="login__button-submit" type="submit">Log In</button>
+          <button class="login__button-submit" type="submit" aria-label="Login to your account with provided info">Log
+            In</button>
           <div class="login__sign-up-wrapper">
             <p>Don’t have an account?</p>
             <a href="#">Sign up</a>
@@ -419,7 +420,7 @@
 
         <ul class="questions__list">
           <li class="questions__list-item">
-            <button class="js-disabled__accordeon-buttons">
+            <button class="js-disabled__accordeon-buttons" aria-label="Open/close the answer">
               <span>What materials are the jewellery made of?</span>
             </button>
             <p class="js-disabled__accordeon-content">Our jewellerry is made of solid gold, silver or leather. Also,
@@ -428,7 +429,7 @@
               and crystals.</p>
           </li>
           <li class="questions__list-item questions__list-item--countries">
-            <button class="js-disabled__accordeon-buttons">
+            <button class="js-disabled__accordeon-buttons" aria-label="Open/close the answer">
               <span>Which countries do you deliver to?</span>
             </button>
             <p class="js-disabled__accordeon-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
@@ -436,7 +437,7 @@
               corrupti neque facilis molestiae!</p>
           </li>
           <li class="questions__list-item">
-            <button class="js-disabled__accordeon-buttons">
+            <button class="js-disabled__accordeon-buttons" aria-label="Open/close the answer">
               <span>What are the payment methods?</span>
             </button>
             <p class="js-disabled__accordeon-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -444,7 +445,7 @@
               perspiciatis voluptatum facere expedita!</p>
           </li>
           <li class="questions__list-item questions__list-item--return">
-            <button class="js-disabled__accordeon-buttons">
+            <button class="js-disabled__accordeon-buttons" aria-label="Open/close the answer">
               <span>Can I return the <br> jewellery if it didn’t fit me?</span>
             </button>
             <p class="js-disabled__accordeon-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
@@ -544,7 +545,7 @@
         <div class="footer__input-wrapper">
           <input id="sub-email" type="email" placeholder="Your E-mail">
           <label class="visually-hidden" for="sub-email">Your email address</label>
-          <button type="submit">Sign Up
+          <button type="submit" aria-label="Create Account button">Sign Up
             <svg width="29" height="9">
               <use xlink:href="img/sprite/sprite_auto.svg#icon-footer-arrow"></use>
             </svg>

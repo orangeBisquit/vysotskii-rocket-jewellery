@@ -4,6 +4,10 @@
     overflow: hidden;
   }
 
+  .js-disabled__menu-toggle {
+    opacity: 0;
+  }
+
   .js-disabled__slider-buttons {
     display: none;
   }
