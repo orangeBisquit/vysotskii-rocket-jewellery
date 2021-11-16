@@ -5,4 +5,3 @@ window.addEventListener('load', () => {
   body.classList.remove('js-disabled');
   mobileMenu.classList.remove('mobile-menu--active');
 });
-

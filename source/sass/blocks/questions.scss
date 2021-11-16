@@ -110,7 +110,7 @@
     cursor: pointer;
     color: $color-accent;
 
-    &:before {
+    &::before {
       transform: translateY(-50%) scale(1.5) rotate(-90deg);
     }
 
@@ -181,11 +181,13 @@
   br {
     display: none;
   }
+
   @media (max-width: $breakpoint-mobile) {
     span {
       width: 100%;
     }
   }
+
   @media (max-width: 480px) {
     br {
       display: inline-block;

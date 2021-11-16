@@ -39,7 +39,7 @@ const swiper = new Swiper('.swiper', {
         type: 'fraction',
         renderFraction(currentClass, totalClass, index, total) {
           return `<span class="${currentClass}"type="button">0 ${index} </span>
-           of  <span class="${totalClass}"type="button">0 ${total} </span>`;
+          of  <span class="${totalClass}"type="button">0 ${total} </span>`;
         },
       },
     },

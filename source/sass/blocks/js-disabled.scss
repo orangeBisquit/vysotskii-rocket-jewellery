@@ -18,18 +18,19 @@
   }
 
   .js-disabled__accordeon-buttons {
+    span {
+      border-bottom-color: $color-white;
+    }
+
     &:hover {
       color: $color-text;
       cursor: default;
-
-      span {
-        border-bottom-color: $color-white;
-      }
     }
 
     &:focus {
       outline: 0;
     }
+
     &::before {
       display: none;
     }

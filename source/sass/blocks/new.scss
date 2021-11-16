@@ -63,6 +63,7 @@
     img {
       transform: scale(1.04);
     }
+
     h4,
     p {
       color: $color-accent;
@@ -75,6 +76,7 @@
     img {
       transform: scale(1.04);
     }
+
     h4,
     p {
       color: $color-accent;
@@ -130,7 +132,7 @@
 
 .new__pagination-item {
   padding: 5px;
-  background: transparent !important;
+  background: transparent;
   font-family: $font-poppins;
   font-weight: 500;
   font-size: 16px;
