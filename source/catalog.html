@@ -20,7 +20,7 @@
   <title>CH Jewellery Store</title>
 </head>
 
-<body class="js-disabled">
+<body>
   <header class="header mobile-menu mobile-menu--active">
     <div class="header__wrapper wrapper">
       <div class="header__top-container mobile-menu__top-container">
@@ -31,7 +31,7 @@
           </svg>
           <label class="visually-hidden" for="header-search">Search</label>
         </div>
-        <button class="header__menu-toggle mobile-menu__toggle js-disabled__menu-toggle"
+        <button class="header__menu-toggle mobile-menu__toggle"
           aria-label="Open/Close mobile menu">
           <span class="header__menu-visual"></span>
         </button>
@@ -123,15 +123,15 @@
     </section>
     <section class="catalog">
       <div class="catalog__wrapper wrapper">
-        <button class="catalog__filter-toggle js-disabled__filter-toggle" aria-label="Open filter menu">Filter</button>
-        <form class="catalog__filter filter js-disabled__filter" method="post" action="https://echo.htmlacademy.ru/">
+        <button class="catalog__filter-toggle" aria-label="Open filter menu">Filter</button>
+        <form class="catalog__filter filter" method="post" action="https://echo.htmlacademy.ru/">
           <div class="filter__overlay">
             <button class="filter__button-close" type="button" aria-label="Close filter menu"></button>
             <div class="filter__wrapper">
               <fieldset class="filter__category filter__category--active">
-                <button class="filter__category-toggle js-disabled__accordeon-buttons"
+                <button class="filter__category-toggle"
                   aria-label="Open/Close filter category" type="button">Product</button>
-                <div class="filter__category-wrapper js-disabled__filter-content">
+                <div class="filter__category-wrapper">
                   <p class="filter__field filter__field--checkbox">
                     <input class="visually-hidden" id="product-necklaces" type="checkbox" name="Necklaces" checked>
                     <label for="product-necklaces">Necklaces</label>
@@ -151,9 +151,9 @@
                 </div>
               </fieldset>
               <fieldset class="filter__category">
-                <button class="filter__category-toggle js-disabled__accordeon-buttons"
+                <button class="filter__category-toggle"
                   aria-label="Open/Close filter category" type="button">Material</button>
-                <div class="filter__category-wrapper js-disabled__filter-content">
+                <div class="filter__category-wrapper">
                   <p class="filter__field filter__field--checkbox">
                     <input class="visually-hidden" id="material-gold" type="checkbox" name="Gold">
                     <label for="material-gold">Gold</label>
@@ -165,9 +165,9 @@
                 </div>
               </fieldset>
               <fieldset class="filter__category">
-                <button class="filter__category-toggle js-disabled__accordeon-buttons"
+                <button class="filter__category-toggle"
                   aria-label="Open/Close filter category" type="button">Collection</button>
-                <div class="filter__category-wrapper js-disabled__filter-content">
+                <div class="filter__category-wrapper">
                   <p class="filter__field filter__field--checkbox">
                     <input class="visually-hidden" id="collection-pink-flamingo" type="checkbox" name="Pink flamingo">
                     <label for="collection-pink-flamingo">Pink flamingo</label>
@@ -179,9 +179,9 @@
                 </div>
               </fieldset>
               <fieldset class="filter__category filter__category--radio filter__category--active">
-                <button class="filter__category-toggle js-disabled__accordeon-buttons"
+                <button class="filter__category-toggle"
                   aria-label="Open/Close filter category" type="button">Price</button>
-                <div class="filter__category-wrapper js-disabled__filter-content">
+                <div class="filter__category-wrapper">
                   <div class="filter__field">
                     <div class="filter__radio-slide">
                       <button class="filter__radio-price filter__radio-price--low" aria-label="Price minimum"
