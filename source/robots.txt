@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Sitemap: https://vysotskii-rocket-jewellery.vercel.app/sitemap.xml
