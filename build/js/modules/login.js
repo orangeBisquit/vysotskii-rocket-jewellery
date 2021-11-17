@@ -75,12 +75,10 @@ window.addEventListener('keydown', (evt) => {
 });
 
 // LocalStorage
-login.addEventListener('submit', (evt) => {
+login.addEventListener('submit', () => {
   const email = login.querySelector('#login-email');
 
   if (email) {
     window.localStorage.setItem('email', email.value);
   }
 });
-
-
