@@ -78,7 +78,7 @@
     margin-bottom: 17px;
 
     span {
-      display: block;
+      display: inline-block;
       width: 76%;
     }
   }
@@ -89,10 +89,10 @@
     background-image: url("../img/icons/icon-accordeon-arrow.svg");
     top: 50%;
     right: 0;
-    transform: translateY(-50%) rotate(-180deg);
+    transform: translateY(-50%) rotate(180deg);
     background-position: center;
     background-size: cover;
-    transition: 0.15s ease;
+    transition: 0.3s ease;
 
     @media (max-width: $breakpoint-tablet) {
       width: 23px;
@@ -111,11 +111,7 @@
     color: $color-accent;
 
     &::before {
-      transform: translateY(-50%) scale(1.5) rotate(-90deg);
-    }
-
-    span {
-      border-bottom: 1px solid $color-accent;
+      transform: translateY(-50%) scale(1.5) rotate(180deg);
     }
   }
 

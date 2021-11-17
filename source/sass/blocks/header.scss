@@ -1,3 +1,7 @@
+.header {
+  overflow-x: hidden;
+}
+
 .header__top-container {
   display: flex;
   justify-content: space-between;
@@ -351,6 +355,7 @@
   @media (max-width: $breakpoint-tablet) {
     display: inline;
     color: $color-white;
+    margin-bottom: 50px;
 
     &:hover {
       text-decoration: underline;
@@ -377,6 +382,8 @@
     margin-top: 13px;
 
     &:hover {
+      cursor: pointer;
+
       .header__menu-visual::before {
         top: -10px;
       }

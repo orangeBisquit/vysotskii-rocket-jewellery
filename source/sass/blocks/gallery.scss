@@ -1,3 +1,8 @@
+.gallery {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .gallery__wrapper {
   display: flex;
   flex-direction: column;
@@ -57,6 +62,12 @@
   }
 }
 
+.gallery__grid-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .gallery__grid-item {
   &--big {
     grid-column-start: 2;
@@ -74,9 +85,4 @@
       display: none;
     }
   }
-}
-
-.gallery__grid-item img {
-  display: block;
-  width: 100%;
 }

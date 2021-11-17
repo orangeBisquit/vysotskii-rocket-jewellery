@@ -12,6 +12,7 @@ const body = document.querySelector('body');
 const closeLogin = () => {
   login.classList.remove('login--open');
   body.classList.remove('no-scroll');
+  login.reset();
 };
 
 const openLogin = (evt) => {

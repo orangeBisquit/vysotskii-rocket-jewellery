@@ -30,7 +30,7 @@
           </svg>
           <label class="visually-hidden" for="header-search">Search</label>
         </div>
-        <button class="header__menu-toggle mobile-menu__toggle" aria-label="Open/Close mobile menu">
+        <button class="header__menu-toggle mobile-menu__toggle js-disabled__menu-toggle" aria-label="Open/Close mobile menu">
           <span class="header__menu-visual"></span>
         </button>
         <a href="index.html" class="header__logo mobile-menu__logo">
@@ -52,7 +52,7 @@
     <nav class="header__menu mobile-menu__nav">
       <ul class="header__menu-list wrapper">
         <li class="header__menu-item">
-          <a id="searchTabDownTarget" href="#">What’s new</a>
+          <a id="searchTabDownTarget" href="index.html#new">What’s new</a>
         </li>
         <li class="header__menu-item">
           <a href="#">Chokers</a>
@@ -86,7 +86,7 @@
       <div class="login__wrapper">
         <h2 class="login__heading">Log In</h2>
         <button class="login__button-close" type="button" aria-label="Open/Close mobile menu"></button>
-        <form class="login__form">
+        <form class="login__form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="login__field">
             <input id="login-email" name="login-email" type="email" placeholder="Your E-mail" required="">
             <label class="visually-hidden" for="login-email">Your E-mail</label>
@@ -122,7 +122,7 @@
     <section class="catalog">
       <div class="catalog__wrapper wrapper">
         <button class="catalog__filter-toggle js-disabled__filter-toggle" aria-label="Open filter menu">Filter</button>
-        <form class="catalog__filter filter js-disabled__filter">
+        <form class="catalog__filter filter js-disabled__filter" method="post" action="https://echo.htmlacademy.ru/">
           <div class="filter__overlay">
             <button class="filter__button-close" type="button" aria-label="Close filter menu"></button>
             <div class="filter__wrapper">
@@ -178,16 +178,16 @@
                 <div class="filter__category-wrapper js-disabled__filter-content">
                   <div class="filter__field">
                     <div class="filter__radio-slide">
-                      <button class="filter__radio-price filter__radio-price--low" aria-label="Price minimum">$
+                      <button class="filter__radio-price filter__radio-price--low" aria-label="Price minimum" type="button">$
                         55</button>
-                      <button class="filter__radio-price filter__radio-price--high" aria-label="Price maximum">$
+                      <button class="filter__radio-price filter__radio-price--high" aria-label="Price maximum" type="button">$
                         155</button>
                     </div>
                   </div>
                 </div>
               </fieldset>
             </div>
-            <button class="filter__button-apply" type="button">Apply</button>
+            <button class="filter__button-apply" type="submit">Apply</button>
             <button class="filter__button-clear" type="button">Clear All</button>
           </div>
         </form>
@@ -196,8 +196,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-1-1x.webp 1x, img/catalog/catalog-mobile-1-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-1-1x.webp 1x, img/catalog/catalog-tablet-1-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-1-1x.webp 1x, img/catalog/catalog-mobile-1-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-1-1x.webp 1x, img/catalog/catalog-tablet-1-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-1-1x.webp 1x, img/catalog/catalog-dekstop-1-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-1-1x.jpg 1x, img/catalog/catalog-mobile-1-2x.jpg 2x">
@@ -213,8 +213,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-2-1x.webp 1x, img/catalog/catalog-mobile-2-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-2-1x.webp 1x, img/catalog/catalog-tablet-2-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-2-1x.webp 1x, img/catalog/catalog-mobile-2-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-2-1x.webp 1x, img/catalog/catalog-tablet-2-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-2-1x.webp 1x, img/catalog/catalog-dekstop-2-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-2-1x.jpg 1x, img/catalog/catalog-mobile-2-2x.jpg 2x">
@@ -230,8 +230,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-3-1x.webp 1x, img/catalog/catalog-mobile-3-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-3-1x.webp 1x, img/catalog/catalog-tablet-3-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-3-1x.webp 1x, img/catalog/catalog-mobile-3-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-3-1x.webp 1x, img/catalog/catalog-tablet-3-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-3-1x.webp 1x, img/catalog/catalog-dekstop-3-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-3-1x.jpg 1x, img/catalog/catalog-mobile-3-2x.jpg 2x">
@@ -247,8 +247,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-4-1x.webp 1x, img/catalog/catalog-mobile-4-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-4-1x.webp 1x, img/catalog/catalog-tablet-4-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-4-1x.webp 1x, img/catalog/catalog-mobile-4-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-4-1x.webp 1x, img/catalog/catalog-tablet-4-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-4-1x.webp 1x, img/catalog/catalog-dekstop-4-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-4-1x.jpg 1x, img/catalog/catalog-mobile-4-2x.jpg 2x">
@@ -265,8 +265,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-5-1x.webp 1x, img/catalog/catalog-mobile-5-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-5-1x.webp 1x, img/catalog/catalog-tablet-5-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-5-1x.webp 1x, img/catalog/catalog-mobile-5-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-5-1x.webp 1x, img/catalog/catalog-tablet-5-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-5-1x.webp 1x, img/catalog/catalog-dekstop-5-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-5-1x.jpg 1x, img/catalog/catalog-mobile-5-2x.jpg 2x">
@@ -283,8 +283,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-6-1x.webp 1x, img/catalog/catalog-mobile-6-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-6-1x.webp 1x, img/catalog/catalog-tablet-6-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-6-1x.webp 1x, img/catalog/catalog-mobile-6-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-6-1x.webp 1x, img/catalog/catalog-tablet-6-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-6-1x.webp 1x, img/catalog/catalog-dekstop-6-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-6-1x.jpg 1x, img/catalog/catalog-mobile-6-2x.jpg 2x">
@@ -301,8 +301,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-7-1x.webp 1x, img/catalog/catalog-mobile-7-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-7-1x.webp 1x, img/catalog/catalog-tablet-7-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-7-1x.webp 1x, img/catalog/catalog-mobile-7-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-7-1x.webp 1x, img/catalog/catalog-tablet-7-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-7-1x.webp 1x, img/catalog/catalog-dekstop-7-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-7-1x.jpg 1x, img/catalog/catalog-mobile-7-2x.jpg 2x">
@@ -319,8 +319,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-8-1x.webp 1x, img/catalog/catalog-mobile-8-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-8-1x.webp 1x, img/catalog/catalog-tablet-8-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-8-1x.webp 1x, img/catalog/catalog-mobile-8-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-8-1x.webp 1x, img/catalog/catalog-tablet-8-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-8-1x.webp 1x, img/catalog/catalog-dekstop-8-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-8-1x.jpg 1x, img/catalog/catalog-mobile-8-2x.jpg 2x">
@@ -337,8 +337,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-9-1x.webp 1x, img/catalog/catalog-mobile-9-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-9-1x.webp 1x, img/catalog/catalog-tablet-9-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-9-1x.webp 1x, img/catalog/catalog-mobile-9-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-9-1x.webp 1x, img/catalog/catalog-tablet-9-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-9-1x.webp 1x, img/catalog/catalog-dekstop-9-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-9-1x.jpg 1x, img/catalog/catalog-mobile-9-2x.jpg 2x">
@@ -355,8 +355,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-10-1x.webp 1x, img/catalog/catalog-mobile-10-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-10-1x.webp 1x, img/catalog/catalog-tablet-10-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-10-1x.webp 1x, img/catalog/catalog-mobile-10-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-10-1x.webp 1x, img/catalog/catalog-tablet-10-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-10-1x.webp 1x, img/catalog/catalog-dekstop-10-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-10-1x.jpg 1x, img/catalog/catalog-mobile-10-2x.jpg 2x">
@@ -373,8 +373,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-11-1x.webp 1x, img/catalog/catalog-mobile-11-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-11-1x.webp 1x, img/catalog/catalog-tablet-11-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-11-1x.webp 1x, img/catalog/catalog-mobile-11-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-11-1x.webp 1x, img/catalog/catalog-tablet-11-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-11-1x.webp 1x, img/catalog/catalog-dekstop-11-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-11-1x.jpg 1x, img/catalog/catalog-mobile-11-2x.jpg 2x">
@@ -391,8 +391,8 @@
             <li class="catalog__list-item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(nax-width: 767px)" srcset="img/catalog/catalog-mobile-12-1x.webp 1x, img/catalog/catalog-mobile-12-2x.webp 2x">
-                  <source type="image/webp" media="(nax-width: 1023px)" srcset="img/catalog/catalog-tablet-12-1x.webp 1x, img/catalog/catalog-tablet-12-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-12-1x.webp 1x, img/catalog/catalog-mobile-12-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-tablet-12-1x.webp 1x, img/catalog/catalog-tablet-12-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/catalog-dekstop-12-1x.webp 1x, img/catalog/catalog-dekstop-12-2x.webp 2x">
                   <!-- 1x - 130/136,  2x - 260/272,-->
                   <source media="(max-width: 767px)" srcset="img/catalog/catalog-mobile-12-1x.jpg 1x, img/catalog/catalog-mobile-12-2x.jpg 2x">
@@ -433,11 +433,11 @@
   </main>
   <footer class="footer">
     <div class="footer__wrapper wrapper">
-      <form class="footer__mailing-wrapper">
+      <form class="footer__mailing-wrapper" action="https://echo.htmlacademy.ru/" method="post">
         <h3>The good stuff in your inbox</h3>
         <p>News and updates from CH. No spam, we promise.</p>
         <div class="footer__input-wrapper">
-          <input id="sub-email" type="email" placeholder="Your E-mail">
+          <input id="sub-email" type="email" placeholder="Your E-mail" name="sub-email">
           <label class="visually-hidden" for="sub-email">Your email address</label>
           <button type="submit" aria-label="Create Account button">Sign Up
             <svg width="29" height="9">
