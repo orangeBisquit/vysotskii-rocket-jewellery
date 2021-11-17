@@ -73,3 +73,14 @@ window.addEventListener('keydown', (evt) => {
     }
   }
 });
+
+// LocalStorage
+login.addEventListener('submit', (evt) => {
+  const email = login.querySelector('#login-email');
+
+  if (email) {
+    window.localStorage.setItem('email', email.value);
+  }
+});
+
+
