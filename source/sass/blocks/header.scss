@@ -1,4 +1,5 @@
 .header {
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -117,6 +118,10 @@
   width: 66px;
   height: 66px;
 
+  @media (max-width: $breakpoint-tablet) {
+    transform: translateX(-50%);
+  }
+
   @media (max-width: $breakpoint-mobile) {
     top: 18px;
     width: 52px;
@@ -190,8 +195,9 @@
 
 .header__cart-button {
   @media (max-width: $breakpoint-tablet) {
-    display: block;
     position: relative;
+    left: 5px;
+    display: block;
     width: 28px;
     height: 26px;
 

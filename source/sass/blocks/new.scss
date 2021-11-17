@@ -125,6 +125,8 @@
 
   @media (max-width: $breakpoint-mobile) {
     span {
+      margin-right: 5px;
+      margin-left: 5px;
       appearance: none;
     }
   }
@@ -154,7 +156,7 @@
 
 .new__button {
   position: absolute;
-  top: 157px;
+  top: 165px;
   width: 29px;
   height: 9px;
   background-image: url("../img/icons/icon-slider-arrow.svg");
