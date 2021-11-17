@@ -64,13 +64,8 @@
       order: 1;
       width: 100%;
 
-      @media (max-width: $breakpoint-tablet) {
-        margin-bottom: -20px;
-      }
-
       @media (max-width: $breakpoint-mobile) {
         margin-top: 24px;
-        margin-bottom: -16px;
       }
     }
 
