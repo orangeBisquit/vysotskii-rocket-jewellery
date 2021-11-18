@@ -80,9 +80,15 @@
   text-transform: uppercase;
   letter-spacing: 0.03em;
 
+  @media (max-width: $breakpoint-tablet) {
+    position: relative;
+    left: -9px;
+  }
+
   @media (max-width: $breakpoint-mobile) {
     line-height: 110%;
     font-size: 38px;
+    left: 0;
   }
 }
 
@@ -92,8 +98,14 @@
   font-size: 38px;
   line-height: 130%;
 
+  @media (max-width: $breakpoint-tablet) {
+    position: relative;
+    left: -9px;
+  }
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 34px;
+    left: 0;
   }
 }
 

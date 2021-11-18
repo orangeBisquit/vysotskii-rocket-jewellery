@@ -50,6 +50,10 @@
   span {
     position: relative;
     left: -5px;
+
+    @media (max-width: $breakpoint-mobile) {
+      left: -2px;
+    }
   }
 }
 
@@ -183,6 +187,7 @@
 
   @media (max-width: $breakpoint-mobile) {
     display: block;
+    padding-top: 44px;
   }
 }
 
@@ -312,8 +317,19 @@
 
 .footer__social svg {
   position: absolute;
-  top: 50%;
-  left: 7px;
+  top: 44%;
+  left: 5px;
   transform: translateY(-50%);
   fill: $color-white;
+}
+
+// Pixel Perfect
+.footer__column-item {
+  &--facebook svg {
+    left: 9px;
+  }
+
+  &--pinterest svg {
+    left: 6px;
+  }
 }

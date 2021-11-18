@@ -6,12 +6,12 @@
 .gallery__wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 110px;
+  padding-top: 108px;
   margin-bottom: 130px;
 
   @media (max-width: $breakpoint-tablet) {
-    padding-top: 72px;
-    margin-bottom: 80px;
+    padding-top: 69px;
+    margin-bottom: 79px;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -26,13 +26,17 @@
   @media (max-width: $breakpoint-tablet) {
     margin-bottom: 20px;
   }
+
+  span {
+    font-size: 39px;
+  }
 }
 
 .gallery__follow-link {
   margin-bottom: 63px;
 
   @media (max-width: $breakpoint-tablet) {
-    margin-bottom: 64px;
+    margin-bottom: 63px;
   }
 
   @media (max-width: $breakpoint-mobile) {
