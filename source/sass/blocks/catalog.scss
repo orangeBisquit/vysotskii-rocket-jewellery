@@ -2,7 +2,7 @@
   width: 100vw;
   min-height: 700px;
   padding-top: 80px;
-  padding-bottom: 71px;
+  padding-bottom: 70px;
   overflow-x: hidden;
 
   @media (max-width: $breakpoint-tablet) {
@@ -12,7 +12,7 @@
 
   @media (max-width: $breakpoint-mobile) {
     padding-top: 40px;
-    padding-bottom: 56px;
+    padding-bottom: 55px;
   }
 }
 
@@ -29,13 +29,13 @@
 .catalog__list {
   display: grid;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   padding: 0;
   list-style: none;
   column-gap: calc(30 / 865 * 100%);
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 36px;
+  row-gap: 35px;
 
   @media (max-width: $breakpoint-tablet) {
     column-gap: calc(38 / 865 * 100%);
@@ -44,7 +44,7 @@
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr 1fr;
     column-gap: calc(28 / 270 * 100%);
-    row-gap: 26px;
+    row-gap: 24px;
     margin-bottom: 0;
   }
 }
@@ -224,6 +224,6 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 }

@@ -5,7 +5,7 @@
 }
 
 .filter__wrapper {
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 
   @media (max-width: $breakpoint-tablet) {
     margin-bottom: 40px;
@@ -21,7 +21,7 @@
   padding: 0;
   padding-top: 23px;
   padding-right: 25px;
-  padding-bottom: 22px;
+  padding-bottom: 21px;
   padding-left: 19px;
   border: 1px solid $color-accent;
 
@@ -61,7 +61,7 @@
 
 .filter__category-wrapper {
   display: none;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   padding-top: 22px;
 
   @media (max-width: $breakpoint-mobile) {
@@ -128,7 +128,7 @@
 
 .filter__field--checkbox {
   &:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
     @media (max-width: $breakpoint-tablet) {
       margin-bottom: 18px;
@@ -141,7 +141,8 @@
     padding-left: 25px;
     font-weight: 500;
     font-size: 14px;
-    line-height: 120%;
+    min-height: 15px;
+    vertical-align: middle;
 
     @media (max-width: $breakpoint-tablet) {
       font-size: 16px;
@@ -226,6 +227,8 @@
 }
 
 .filter__category--radio {
+  padding-bottom: 16px;
+
   .filter__category-wrapper {
     @media (max-width: $breakpoint-tablet) {
       padding-top: 36px;
