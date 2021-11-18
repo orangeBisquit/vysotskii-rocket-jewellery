@@ -27,13 +27,13 @@
 
 .blog__list {
   display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  column-gap: calc(30 / 1170 * 100%);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: calc(30 / 1170 * 100%);
   row-gap: 30px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 
   @media (max-width: $breakpoint-tablet) {
     display: block;
@@ -96,17 +96,17 @@
     }
 
     .blog__content-wrapper {
-      position: absolute;
-      bottom: 0;
-      right: 0;
       z-index: 3;
+      position: absolute;
+      right: 0;
+      bottom: 0;
       height: calc(300 / 630 * 100%);
       padding-bottom: 73px;
 
       @media (max-width: $breakpoint-tablet) {
         position: relative;
-        height: auto;
         width: 50%;
+        height: auto;
         padding-bottom: 40px;
       }
 
@@ -150,13 +150,13 @@
 .blog__content-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 50%;
-  background-color: $color-accent-light;
-  text-align: center;
   padding: 30px;
   padding-bottom: 40px;
+  text-align: center;
+  background-color: $color-accent-light;
 
   @media (max-width: 1300px) {
     padding: 30px;
@@ -175,10 +175,10 @@
 
 .blog__content-wrapper time {
   display: block;
+  margin-bottom: 13px;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
-  margin-bottom: 13px;
 
   @media (max-width: $breakpoint-tablet) {
     @include fluid-font(768px, 1023px, 14px, 16px);
@@ -186,13 +186,13 @@
 }
 
 .blog__content-wrapper h4 {
-  font-family: $font-cormorant;
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 130%;
   max-width: 163px;
   margin: 0 auto;
   margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 130%;
+  font-family: $font-cormorant;
 
   @include fluid-font(1024px, 1366px, 23px, 26px);
 

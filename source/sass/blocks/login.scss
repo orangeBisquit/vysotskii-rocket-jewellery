@@ -1,13 +1,13 @@
 .login {
   display: none;
-  position: fixed;
   z-index: 999;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: $color-white;
   overflow-y: scroll;
+  background-color: $color-white;
 
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -100,9 +100,9 @@
   border: 0;
   background-color: transparent;
   background-image: url("../img/icons/icon-close-login.svg");
-  background-size: 14px 14px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 14px 14px;
   transition: 0.15s ease;
 
   @media (max-width: $breakpoint-mobile) {
@@ -140,11 +140,11 @@
   padding: 9px 0;
   border: 0;
   border-bottom: 1px solid $color-black;
-  background-color: transparent;
+  color: $color-black;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: $color-black;
+  background-color: transparent;
   transition: 0.15s ease;
 
   &::placeholder {
@@ -175,10 +175,10 @@
 }
 
 .login__forgot-wrapper a {
+  color: $color-input-placeholder;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: $color-input-placeholder;
   text-decoration: none;
   transition: 0.15s ease;
 
@@ -194,15 +194,15 @@
 .login__button-submit {
   display: block;
   width: 100%;
-  border: 0;
-  padding: 24px;
   margin: 0;
   margin-bottom: 15px;
-  background-color: $color-accent;
+  padding: 24px;
+  border: 0;
+  color: $color-white;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
-  color: $color-white;
+  background-color: $color-accent;
 
   &:hover,
   &:focus {
@@ -226,10 +226,10 @@
 .login__sign-up-wrapper p {
   margin: 0;
   margin-right: 13px;
+  color: $color-input-placeholder;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: $color-input-placeholder;
 
   @media (max-width: $breakpoint-mobile) {
     margin: 0;
@@ -239,10 +239,10 @@
 .login__sign-up-wrapper a {
   position: relative;
   left: -5px;
+  color: $color-text;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: $color-text;
   text-decoration: none;
 
   @media (max-width: $breakpoint-mobile) {

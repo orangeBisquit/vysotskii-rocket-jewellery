@@ -1,9 +1,9 @@
 .catalog {
   width: 100vw;
-  overflow-x: hidden;
   min-height: 700px;
   padding-top: 80px;
   padding-bottom: 71px;
+  overflow-x: hidden;
 
   @media (max-width: $breakpoint-tablet) {
     padding-top: 50px;
@@ -18,9 +18,8 @@
 
 .catalog__wrapper {
   display: grid;
-  grid-template-columns: calc(250 / 1170 * 100%) calc(870 / 1170 * 100%);
   column-gap: calc(50 / 1170 * 100%);
-  min-height: 700px;
+  grid-template-columns: calc(250 / 1170 * 100%) calc(870 / 1170 * 100%);
 
   @media (max-width: $breakpoint-tablet) {
     display: block;
@@ -131,13 +130,13 @@
 }
 
 .catalog__pagination-button {
-  padding: 0;
   margin: 0;
+  padding: 0;
   border: 0;
-  background-color: transparent;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
+  background-color: transparent;
 
   @media (max-width: $breakpoint-mobile) {
     display: none;
@@ -156,29 +155,29 @@
 }
 
 .catalog__pagination-list {
+  display: flex;
   position: relative;
-  padding: 0;
   left: -13px;
   margin: 0;
+  padding: 0;
   list-style: none;
-  display: flex;
 
   @media (max-width: $breakpoint-mobile) {
     left: 2px;
   }
 }
 
-.catalog__pagination__item {
+.catalog__pagination-item {
   margin-right: 5px;
 }
 
-.catalog__pagination__item a {
+.catalog__pagination-item a {
   display: block;
   padding: 4px;
+  color: $color-input-placeholder;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
-  color: $color-input-placeholder;
   text-decoration: none;
 
   @media (max-width: $breakpoint-mobile) {
@@ -197,7 +196,7 @@
   }
 }
 
-.catalog__pagination__item--active a {
+.catalog__pagination-item--active a {
   color: $color-text;
 }
 
@@ -207,14 +206,14 @@
   @media (max-width: $breakpoint-tablet) {
     display: block;
     width: 100%;
-    border: 0;
-    padding: 24px;
     margin-bottom: 50px;
-    background-color: $color-accent;
+    padding: 24px;
+    border: 0;
+    color: $color-white;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
-    color: $color-white;
+    background-color: $color-accent;
 
     &:hover,
     &:focus {

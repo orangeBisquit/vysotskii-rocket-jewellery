@@ -34,31 +34,31 @@
 .header__search-container input {
   position: relative;
   left: -7px;
-  border: 0;
-  border-bottom: 2px solid $color-white;
   padding: 10px;
   padding-left: 35px;
+  border: 0;
+  border-bottom: 2px solid $color-white;
   transition: 0.2s all ease;
   appearance: none;
 
   @media (max-width: $breakpoint-tablet) {
     left: 0;
     width: 100%;
-    border-radius: 31px;
-    border-bottom: 0;
-    background-color: rgba($color-white, 0.15);
-    color: $color-accent;
     margin-top: 20px;
     padding-bottom: 12px;
+    border-bottom: 0;
+    border-radius: 31px;
+    color: $color-accent;
+    background-color: rgba($color-white, 0.15);
   }
 
   &::placeholder {
-    font-family: $font-poppins;
+    color: $color-input-placeholder;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: $color-input-placeholder;
+    font-family: $font-poppins;
 
     @media (max-width: $breakpoint-tablet) {
       color: transparent;
@@ -94,12 +94,12 @@
 }
 
 .header__search-container svg {
-  width: 14px;
-  height: 14px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   left: 0;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
 
   @media (max-width: $breakpoint-tablet) {
     width: 16px;
@@ -114,9 +114,9 @@
   position: absolute;
   top: 30px;
   left: 50%;
-  transform: translateX(-50%);
   width: 66px;
   height: 66px;
+  transform: translateX(-50%);
 
   @media (max-width: $breakpoint-tablet) {
     transform: translateX(-50%);
@@ -158,13 +158,13 @@
 }
 
 .header__user-container a {
+  margin-left: 23px;
+  padding: 5px;
+  color: $color-text;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   text-decoration: none;
-  color: $color-text;
-  padding: 5px;
-  margin-left: 23px;
 
   @media (max-width: $breakpoint-tablet) {
     margin: 0;
@@ -224,13 +224,13 @@
   display: none;
 
   @media (max-width: $breakpoint-tablet) {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     fill: transparent;
     stroke: $color-text;
-    display: block;
   }
 }
 
@@ -285,11 +285,12 @@
   display: inline-block;
   vertical-align: middle;
   padding: 7px;
+  color: $color-text;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: $color-text;
   text-decoration: none;
+
 
   @media (max-width: $breakpoint-tablet) {
     font-size: 24px;
@@ -319,9 +320,9 @@
 
 .header__sub-list {
   display: none;
+  margin-bottom: 45px;
   padding: 0;
   list-style: none;
-  margin-bottom: 45px;
 
   @media (max-width: $breakpoint-mobile) {
     margin-bottom: 35px;
@@ -333,14 +334,15 @@
 }
 
 .header__sub-item a {
+  // To offset padding
+  margin-left: -5px;
+  padding: 5px;
+  color: rgba($color-white, 0.75);
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
   text-decoration: none;
-  color: rgba($color-white, 0.75);
-  padding: 5px;
-  // To offset padding
-  margin-left: -5px;
+
 
   &:hover {
     text-decoration: underline;
@@ -378,14 +380,14 @@
   display: none;
 
   @media (max-width: $breakpoint-tablet) {
-    background-color: transparent;
     display: block;
-    border: 0;
-    padding: 0;
     width: 25px;
     height: 18px;
-    outline-offset: 2px;
     margin-top: 13px;
+    padding: 0;
+    border: 0;
+    outline-offset: 2px;
+    background-color: transparent;
 
     &:hover {
       cursor: pointer;
@@ -407,8 +409,8 @@
 }
 
 .header__menu-visual {
-  position: relative;
   display: block;
+  position: relative;
   width: 25px;
   height: 2px;
   background-color: $color-text;

@@ -16,7 +16,6 @@
   <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-600.woff2" rel="prefetch" as="font" crossorigin>
   <link type="font/woff2" href="fonts/cormorant-garamond-v10-latin-700.woff2" rel="prefetch" as="font" crossorigin>
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link href="css/style.min.css" rel="stylesheet">
   <title>CH Jewellery Store</title>
 </head>
@@ -25,13 +24,13 @@
   <header class="header mobile-menu">
     <div class="header__wrapper wrapper">
       <div class="header__top-container mobile-menu__top-container">
-        <div class="header__search-container mobile-menu__search-container">
+        <form class="header__search-container mobile-menu__search-container">
           <input id="header-search" name="header-search" type="search" placeholder="Type here to search">
           <svg width="14" height="14">
             <use xlink:href="img/sprite/sprite_auto.svg#icon-search"></use>
           </svg>
           <label class="visually-hidden" for="header-search">Search</label>
-        </div>
+        </form>
         <button class="header__menu-toggle mobile-menu__toggle"
           aria-label="Open/Close mobile menu">
           <span class="header__menu-visual"></span>
@@ -95,7 +94,7 @@
             <label class="visually-hidden" for="login-email">Your E-mail</label>
           </p>
           <p class="login__field login__field--password">
-            <input id="login-password" name="login-password" type="text" placeholder="Password" required>
+            <input id="login-password" name="login-password" type="password" placeholder="Password" required>
             <label class="visually-hidden" for="login-password">Your Password</label>
           </p>
           <div class="login__forgot-wrapper">
@@ -447,7 +446,7 @@
     <section class="blog">
       <div class="blog__wrapper wrapper">
         <h3 class="blog__heading heading">Blog</h3>
-        <a href="" class="blog__read-link link">Read All</a>
+        <a href="#" class="blog__read-link link">Read All</a>
         <ul class="blog__list">
           <li class="blog__list-item">
             <article class="blog__post">
@@ -546,8 +545,8 @@
         <h3 class="questions__heading heading">Frequently asked questions</h3>
 
         <ul class="questions__list">
-          <li class="questions__list-item">
-            <button aria-label="Open/close the answer">
+          <li class="questions__list-item questions__list-item--active">
+            <button class="questions__item-toggle" aria-label="Open/close the answer">
               <span>What materials are the jewellery made of?</span>
             </button>
             <p>Our jewellerry is made of solid gold, silver or leather. Also,
@@ -555,8 +554,8 @@
               semiprecious stones
               and crystals.</p>
           </li>
-          <li class="questions__list-item questions__list-item--countries">
-            <button aria-label="Open/close the answer">
+          <li class="questions__list-item">
+            <button class="questions__item-toggle questions__item-toggle--countries" aria-label="Open/close the answer">
               <span>Which countries do you deliver to?</span>
             </button>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
@@ -564,15 +563,15 @@
               corrupti neque facilis molestiae!</p>
           </li>
           <li class="questions__list-item">
-            <button aria-label="Open/close the answer">
+            <button class="questions__item-toggle" aria-label="Open/close the answer">
               <span>What are the payment methods?</span>
             </button>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Provident exercitationem ratione velit
               perspiciatis voluptatum facere expedita!</p>
           </li>
-          <li class="questions__list-item questions__list-item--return">
-            <button aria-label="Open/close the answer">
+          <li class="questions__list-item">
+            <button class="questions__item-toggle questions__item-toggle--return" aria-label="Open/close the answer">
               <span>Can I return the <br> jewellery if it didn’t fit me?</span>
             </button>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
@@ -585,7 +584,7 @@
     <section class="gallery">
       <div class="gallery__wrapper wrapper">
         <h3 class="gallery__heading heading">@Chjewellery</h3>
-        <a href="" class="gallery__follow-link link">Follow Us</a>
+        <a href="#" class="gallery__follow-link link">Follow Us</a>
         <ul class="gallery__grid-list">
           <li class="gallery__grid-item">
             <picture>

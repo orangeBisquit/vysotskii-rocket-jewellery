@@ -1,15 +1,15 @@
 .footer {
-  background-color: $color-black;
-  color: $color-white;
   width: 100vw;
   overflow-x: hidden;
+  color: $color-white;
+  background-color: $color-black;
 }
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: calc(500 / 1170 * 100%) calc(582 / 1170 * 100%);
-  column-gap: calc(92 / 1170 * 100%);
   padding: 90px 0;
+  column-gap: calc(92 / 1170 * 100%);
+  grid-template-columns: calc(500 / 1170 * 100%) calc(582 / 1170 * 100%);
 
   @media (max-width: 1365px) {
     width: clamp(970px, 95%, 1170px);
@@ -36,10 +36,10 @@
 .footer__mailing-wrapper h3 {
   margin: 0;
   margin-bottom: 10px;
-  font-family: $font-cormorant;
   font-weight: 700;
   font-size: 34px;
   line-height: 130%;
+  font-family: $font-cormorant;
   letter-spacing: 0.03em;
 
   @media (max-width: $breakpoint-mobile) {
@@ -51,9 +51,9 @@
 .footer__mailing-wrapper p {
   margin: 0;
   margin-bottom: 33px;
+  color: $color-input-placeholder;
   font-size: 16px;
   line-height: 130%;
-  color: $color-input-placeholder;
 
   @media (max-width: $breakpoint-mobile) {
     width: 80%;
@@ -65,17 +65,17 @@
 }
 
 .footer__input-wrapper input {
+  display: block;
+  flex-grow: 1;
+  margin: 0;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid $color-white;
+  color: $color-white;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   background-color: transparent;
-  margin: 0;
-  display: block;
-  border: 0;
-  border-bottom: 1px solid $color-white;
-  flex-grow: 1;
-  color: $color-white;
-  padding: 10px 0;
   transition: 0.15s ease;
 
   &:hover {
@@ -94,6 +94,8 @@
 .footer__input-wrapper button {
   display: block;
   position: relative;
+  padding: 10px 41px;
+  padding-left: 20px;
   border: 0;
   border-bottom: 1px solid $color-white;
   color: $color-white;
@@ -101,10 +103,8 @@
   font-size: 16px;
   line-height: 130%;
   text-align: left;
-  background-color: transparent;
-  padding: 10px 41px;
-  padding-left: 20px;
   white-space: nowrap;
+  background-color: transparent;
 
   @media (max-width: $breakpoint-mobile) {
     padding-right: 39px;
@@ -148,14 +148,14 @@
 
 .footer__menu-list {
   display: grid;
-  grid-template-columns: calc(173 / 582 * 100%) calc(136 / 582 * 100%) calc(
-      134 / 582 * 100%
-    );
-  column-gap: calc(67 / 582 * 100%);
   margin: 0;
   padding: 0;
   padding-top: 7px;
   list-style: none;
+  column-gap: calc(67 / 582 * 100%);
+  grid-template-columns: calc(173 / 582 * 100%) calc(136 / 582 * 100%) calc(
+      134 / 582 * 100%
+    );
 
   @media (max-width: 1300px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -204,12 +204,12 @@
 }
 
 .footer__column-item a {
+  display: block;
+  color: $color-white;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
-  color: $color-white;
   text-decoration: none;
-  display: block;
   white-space: nowrap;
 
   @media (max-width: 1366px) {
@@ -262,9 +262,9 @@
 
 .footer__social .footer__column-list {
   @media (max-width: $breakpoint-mobile) {
-    max-width: 70%;
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
     margin-bottom: 0;
   }
 }
