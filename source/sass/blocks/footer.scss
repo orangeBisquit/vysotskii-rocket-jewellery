@@ -33,7 +33,7 @@
   }
 }
 
-.footer__mailing-wrapper h3 {
+.footer__mailing-heading {
   margin: 0;
   margin-bottom: 10px;
   font-weight: 700;
@@ -45,6 +45,11 @@
   @media (max-width: $breakpoint-mobile) {
     width: 75%;
     margin-bottom: 14px;
+  }
+
+  span {
+    position: relative;
+    left: -5px;
   }
 }
 
@@ -199,7 +204,7 @@
 
 .footer__column-item {
   &:not(:last-child) {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
   }
 }
 
