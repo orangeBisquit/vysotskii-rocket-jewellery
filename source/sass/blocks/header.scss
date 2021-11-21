@@ -4,6 +4,7 @@
 }
 
 .header__top-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -12,7 +13,6 @@
   padding-bottom: 44px;
 
   @media (max-width: $breakpoint-tablet) {
-    position: relative;
     padding-top: 41px;
     padding-bottom: 50px;
   }
@@ -116,11 +116,7 @@
   left: 50%;
   width: 66px;
   height: 66px;
-  transform: translateX(-40%);
-
-  @media (max-width: $breakpoint-tablet) {
-    transform: translateX(-50%);
-  }
+  transform: translateX(-50%);
 
   @media (max-width: $breakpoint-mobile) {
     top: 18px;
@@ -148,6 +144,10 @@
 }
 
 .header__user-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 35%;
   padding-top: 9px;
   /* To offset link padding */
   margin-right: -5px;
