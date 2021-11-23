@@ -70,66 +70,70 @@ const createSlider = () => {
 createSlider();
 
 const swiperContainer = document.querySelector('.swiper-wrapper');
-const slides = document.querySelectorAll('.swiper-slide a');
-const firstSlide = slides[0];
-const lastSlide = slides[slides.length - 1];
 
-// Кастомное передвижение фокуса
-let progress = 0;
-let step;
+if (swiperContainer) {
+  const slides = document.querySelectorAll('.swiper-slide a');
+  const firstSlide = slides[0];
+  const lastSlide = slides[slides.length - 1];
 
-if (window.matchMedia('(max-width: 1023px)').matches) {
-  step = (100 / (slides.length - 2)) / 100;
-} else {
-  step = step = (100 / (slides.length - 4)) / 100;
-}
+  // Кастомное передвижение фокуса
+  let progress = 0;
+  let step;
 
-window.addEventListener('resize', ()=> {
   if (window.matchMedia('(max-width: 1023px)').matches) {
     step = (100 / (slides.length - 2)) / 100;
   } else {
     step = step = (100 / (slides.length - 4)) / 100;
   }
-});
-
-firstSlide.addEventListener('focus', () => {
-  progress = 0;
-  swiper.setProgress(0, 1000);
-});
-
-lastSlide.addEventListener('focus', () => {
-  progress = 1;
-  swiper.setProgress(1, 1000);
-});
-
-swiperContainer.addEventListener('keydown', (evt) => {
-  const isTabDown = evt.keyCode === 9 && !evt.shiftKey;
-  const isTabUp = evt.shiftKey && evt.keyCode === 9;
-
-  if (isTabDown) {
-    progress += step;
-    swiper.setProgress(progress, 1000);
-  }
-  if (isTabUp) {
-    progress -= step;
-    swiper.setProgress(progress, 1000);
-  }
-});
-
-// Перерисовка булетов на разных версиях
-document.addEventListener('DOMContentLoaded', () => {
-  let resizeEnd;
 
   window.addEventListener('resize', () => {
-    clearTimeout(resizeEnd);
-    resizeEnd = setTimeout(() => {
-      const evt = new Event('resize-end');
-      window.dispatchEvent(evt);
-
-    }, 500);
+    if (window.matchMedia('(max-width: 1023px)').matches) {
+      step = (100 / (slides.length - 2)) / 100;
+    } else {
+      step = step = (100 / (slides.length - 4)) / 100;
+    }
   });
-});
 
-window.addEventListener('resize-end', () => {
-  createSlider();
-});
+  firstSlide.addEventListener('focus', () => {
+    progress = 0;
+    swiper.setProgress(0, 1000);
+  });
+
+  lastSlide.addEventListener('focus', () => {
+    progress = 1;
+    swiper.setProgress(1, 1000);
+  });
+
+  swiperContainer.addEventListener('keydown', (evt) => {
+    const isTabDown = evt.keyCode === 9 && !evt.shiftKey;
+    const isTabUp = evt.shiftKey && evt.keyCode === 9;
+
+    if (isTabDown) {
+      progress += step;
+      swiper.setProgress(progress, 1000);
+    }
+    if (isTabUp) {
+      progress -= step;
+      swiper.setProgress(progress, 1000);
+    }
+  });
+
+  // Перерисовка булетов на разных версиях
+  document.addEventListener('DOMContentLoaded', () => {
+    let resizeEnd;
+
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeEnd);
+      resizeEnd = setTimeout(() => {
+        const evt = new Event('resize-end');
+        window.dispatchEvent(evt);
+
+      }, 500);
+    });
+  });
+
+  window.addEventListener('resize-end', () => {
+    createSlider();
+  });
+}
+
